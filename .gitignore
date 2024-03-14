@@ -1,3 +1,4 @@
-/.metals
-/.bloop
+.metals
+.bloop
+target
 
