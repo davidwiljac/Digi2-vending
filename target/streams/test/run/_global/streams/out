@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[DisplayMultiplexer.scala 17:21] : [module DisplayMultiplexer]  Reference table is not fully initialized.[0m
+[0m[[0m[31merror[0m] [0m[0m   : table.io.address <= mux(_T_4, io.price, mux(_T_5, io.price, mux(_T_6, io.sum, mux(_T_7, io.sum, VOID))))[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mrun[0m) firrtl.passes.CheckInitialization$RefNotInitializedException:  @[DisplayMultiplexer.scala 17:21] : [module DisplayMultiplexer]  Reference table is not fully initialized.[0m
+[0m[[0m[31merror[0m] [0m[0m   : table.io.address <= mux(_T_4, io.price, mux(_T_5, io.price, mux(_T_6, io.sum, mux(_T_7, io.sum, VOID))))[0m
