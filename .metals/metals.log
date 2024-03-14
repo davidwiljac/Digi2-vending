@@ -14898,3 +14898,119 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 	at java.lang.Thread.run(Thread.java:840)
 
 2024.03.14 15:05:31 INFO  Exiting server
+15:18:27.539 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+15:18:27.539 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:18:27.539 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+15:18:27.542 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+15:18:27.543 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:18:27.543 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/Loren/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+15:18:27.544 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+15:18:27.550 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:18:27.550 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+15:18:27.551 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+15:18:27.551 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+15:18:27.551 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+15:18:27.611 [pool-1-thread-4] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\.metals\metals (H2 2.2)
+15:18:27.612 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+15:18:27.612 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+15:18:27.612 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+15:18:27.612 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+15:18:27.614 [pool-1-thread-4] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+15:18:27.615 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+15:18:27.615 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:18:27.615 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+15:18:27.618 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:18:27.620 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:18:27.622 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:18:27.622 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:18:27.622 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:18:27.622 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:18:27.623 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:18:27.623 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:18:27.623 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:18:27.623 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:18:27.623 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:18:27.628 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.010s)
+15:18:27.629 [pool-1-thread-4] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+15:18:27.633 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+15:18:27.633 [pool-1-thread-4] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+15:18:27.642 [pool-1-thread-4] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 175 of 514M
+2024.03.14 15:18:27 WARN  Build server is not auto-connectable.
+2024.03.14 15:18:30 INFO  running 'C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\Loren\AppData\Local\Temp\metals6985258462715437576\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.03.14 15:18:32 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 17.0.10)
+2024.03.14 15:18:35 INFO  [info] loading settings for project digi2-vending-build-build from metals.sbt ...
+2024.03.14 15:18:35 INFO  [info] loading project definition from C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\project\project
+2024.03.14 15:18:38 INFO  [info] loading settings for project digi2-vending-build from metals.sbt ...
+2024.03.14 15:18:38 INFO  [info] loading project definition from C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\project
+2024.03.14 15:18:41 INFO  [success] Generated .bloop\digi2-vending-build.json
+2024.03.14 15:18:41 INFO  [success] Total time: 2 s, completed 14. mar. 2024 15.18.41
+2024.03.14 15:18:43 INFO  [info] loading settings for project digi2-vending from build.sbt ...
+2024.03.14 15:18:43 INFO  [info] set current project to digi2-vending (in build file:/C:/Users/Loren/OneDrive%20-%20Danmarks%20Tekniske%20Universitet/DTU/2.%20semester/Digital%20elektronik%202%2002139/Digi2-vending/)
+2024.03.14 15:18:45 INFO  [success] Generated .bloop\digi2-vending-test.json
+2024.03.14 15:18:45 INFO  [success] Generated .bloop\digi2-vending.json
+2024.03.14 15:18:45 INFO  [success] Total time: 1 s, completed 14. mar. 2024 15.18.45
+2024.03.14 15:18:45 INFO  time: ran 'sbt bloopInstall' in 14s
+2024.03.14 15:18:45 INFO  Attempting to connect to the build server...
+2024.03.14 15:18:45 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot defined at C:\Users\Loren\.bloop\bloop.json
+2024.03.14 15:18:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\.metals\bsp.trace.json or C:\Users\Loren\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.03.14 15:18:45 INFO  Attempting to connect to the build server...
+2024.03.14 15:18:45 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot defined at C:\Users\Loren\.bloop\bloop.json
+2024.03.14 15:18:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\project\.metals\bsp.trace.json or C:\Users\Loren\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.03.14 15:18:45 INFO  time: Connected to build server in 0.47s
+2024.03.14 15:18:45 INFO  Connected to Build server: Bloop v1.5.15
+2024.03.14 15:18:47 INFO  compiling digi2-vending (4 scala sources)
+2024.03.14 15:18:55 INFO  time: indexed workspace in 9.51s
+2024.03.14 15:18:59 INFO  time: compiled digi2-vending in 12s
+2024.03.14 15:18:59 INFO  compiling digi2-vending-test (3 scala sources)
+2024.03.14 15:18:59 INFO  time: compiled digi2-vending-test in 0.54s
+2024.03.14 15:30:18 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot defined at C:\Users\Loren\.bloop\bloop.json
+2024.03.14 15:30:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\.metals\bsp.trace.json or C:\Users\Loren\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.03.14 15:30:18 INFO  Connected to Build server: Bloop v1.5.15
+2024.03.14 15:30:18 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot defined at C:\Users\Loren\.bloop\bloop.json
+2024.03.14 15:30:18 INFO  Bloop uses C:\Program Files\Eclipse Adoptium\jdk-17.0.10.7-hotspot defined at C:\Users\Loren\.bloop\bloop.json
+2024.03.14 15:30:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\project\.metals\bsp.trace.json or C:\Users\Loren\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.03.14 15:30:18 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\project\.metals\bsp.trace.json or C:\Users\Loren\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.03.14 15:30:18 INFO  time: Imported build in 0.12s
+2024.03.14 15:30:21 INFO  time: indexed workspace in 2.69s
+2024.03.14 15:36:59 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 15:37:01 INFO  time: compiled digi2-vending in 2.14s
+2024.03.14 15:37:39 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 15:37:41 INFO  time: compiled digi2-vending in 1.38s
+2024.03.14 15:58:22 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 15:58:22 INFO  time: compiled digi2-vending in 0.49s
+2024.03.14 15:59:40 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 15:59:40 INFO  time: compiled digi2-vending in 0.43s
+mar. 14, 2024 4:13:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 730
+mar. 14, 2024 4:16:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 810
+mar. 14, 2024 4:17:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 933
+mar. 14, 2024 4:24:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1096
+2024.03.14 16:44:39 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:44:40 INFO  Deduplicating compilation of digi2-vending from bsp client 'Metals 1.2.2' (since 1h 14m 21.95s)
+2024.03.14 16:44:40 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:44:42 INFO  time: compiled digi2-vending in 2.11s
+2024.03.14 16:44:42 INFO  compiling digi2-vending-test (1 scala source)
+2024.03.14 16:44:44 INFO  time: compiled digi2-vending-test in 2.06s
+2024.03.14 16:44:57 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:44:59 INFO  time: compiled digi2-vending in 1.5s
+2024.03.14 16:45:10 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:45:11 INFO  time: compiled digi2-vending in 1.23s
+2024.03.14 16:45:27 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:45:29 INFO  time: compiled digi2-vending in 1.09s
+2024.03.14 16:52:06 INFO  compiling digi2-vending (1 scala source)
+2024.03.14 16:52:07 INFO  time: compiled digi2-vending in 1.04s
+mar. 14, 2024 4:54:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2189
+2024.03.14 16:56:26 INFO  Shutting down server
+2024.03.14 16:56:26 INFO  shutting down Metals
+2024.03.14 16:56:26 INFO  Shut down connection with build server.
+2024.03.14 16:56:26 INFO  Shut down connection with build server.
+2024.03.14 16:56:26 INFO  Exiting server

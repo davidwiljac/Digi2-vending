@@ -1,19 +1,19 @@
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\test\scala\VendingSimulation.scala:142:26: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\src\test\scala\VendingSimulation.scala:142:26: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      var an = dut.io.an.peek.litValue.toInt[0m
 [0m[[0m[33mwarn[0m] [0m[0m                         ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\test\scala\VendingSimulation.scala:143:28: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\src\test\scala\VendingSimulation.scala:143:28: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      val seg = dut.io.seg.peek.litValue.toInt[0m
 [0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\test\scala\VendingSimulation.scala:151:40: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\src\test\scala\VendingSimulation.scala:151:40: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      d.ledVal(15) = dut.io.releaseCan.peek.litValue == 1[0m
 [0m[[0m[33mwarn[0m] [0m[0m                                       ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\test\scala\VendingSimulation.scala:152:34: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\src\test\scala\VendingSimulation.scala:152:34: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method peek,[0m
 [0m[[0m[33mwarn[0m] [0m[0mor remove the empty argument list from its definition (Java-defined methods are exempt).[0m
 [0m[[0m[33mwarn[0m] [0m[0mIn Scala 3, an unapplied method like this will be eta-expanded into a function.[0m
 [0m[[0m[33mwarn[0m] [0m[0m      d.ledVal(0) = dut.io.alarm.peek.litValue == 1[0m
