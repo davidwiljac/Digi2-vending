@@ -1,17 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala:54:32: value Or is not a member of chisel3.Bool[0m
-[0m[[0m[31merror[0m] [0m[0mdid you mean orR?[0m
-[0m[[0m[31merror[0m] [0m[0m  when (io.customIn(0) =/= 0.U Or io.customIn(1) =/= 0.U Or io.customIn(2) =/= 0.U Or io.customIn(3) =/= 0.U){[0m
-[0m[[0m[31merror[0m] [0m[0m                               ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:88:13: value customIn is not a member of DisplayMultiplexer[0m
-[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(0) := "b1111001".U //E[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:89:13: value customIn is not a member of DisplayMultiplexer[0m
-[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(1) := "b1110011".U //P[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:90:13: value customIn is not a member of DisplayMultiplexer[0m
-[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(2) := "b1111000".U //t[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:91:13: value customIn is not a member of DisplayMultiplexer[0m
-[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(3) := "b1101110".U //y[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0m5 errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi-vending\Digi2-vending\src\main\scala\VendingMachine.scala:53:109: type mismatch;[0m
+[0m[[0m[31merror[0m] [0m[0m found   : chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m  if(dataPath.io.customOut(3) =/= 0.U | dataPath.io.customOut(2) =/= 0.U | dataPath.io.customOut(1) =/= 0.U | dataPath.io.customOut(0) =/= 0.U){[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

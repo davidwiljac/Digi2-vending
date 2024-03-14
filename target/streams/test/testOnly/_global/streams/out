@@ -1,17 +1,66 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VendingTester, org.scalatest.tools.Framework$$anon$1@cade977, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(VendingTester, org.scalatest.tools.Framework$$anon$1@fbe2c6a, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVendingTester:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVending machine test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should pass[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should pass *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (fsm.io_empty_?: OpResult[Bool]) failed @: io.empty in fsm cannot be written from module fsm.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at fsm.<init>(VendingMachine.scala:190)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$2(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.Module$.do_apply(Module.scala:53)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$1(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.<init>(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingTester.$anonfun$new$2(VendingTester.scala:8)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVending machine[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should Release can[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should Release can *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (fsm.io_empty_?: OpResult[Bool]) failed @: io.empty in fsm cannot be written from module fsm.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at fsm.<init>(VendingMachine.scala:190)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$2(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.Module$.do_apply(Module.scala:53)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$1(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.<init>(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingTester.$anonfun$new$5(VendingTester.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVending machine[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should Not release can[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should Not release can *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (fsm.io_empty_?: OpResult[Bool]) failed @: io.empty in fsm cannot be written from module fsm.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at fsm.<init>(VendingMachine.scala:190)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$2(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.Module$.do_apply(Module.scala:53)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$1(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.<init>(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingTester.$anonfun$new$9(VendingTester.scala:42)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVending machine[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should Pass in this random test[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 6 seconds, 835 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should Pass in this random test *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  chisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (fsm.io_empty_?: OpResult[Bool]) failed @: io.empty in fsm cannot be written from module fsm.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at fsm.<init>(VendingMachine.scala:190)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$2(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.Module$.do_apply(Module.scala:53)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.$anonfun$fsm$1(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingMachine.<init>(VendingMachine.scala:38)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at VendingTester.$anonfun$new$13(VendingTester.scala:57)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... ()[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 927 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 4[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 4, failed 0, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	VendingTester[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 0, failed 4, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 4 TESTS FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	VendingTester[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m

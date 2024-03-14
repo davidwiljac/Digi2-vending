@@ -44,17 +44,17 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
 
   dataPath.io.sub := fsm.io.sub
   dataPath.io.add := fsm.io.add
-
-  dataPath.io.empty := fsm.io.empty
   
   fsm.io.price := io.price
   fsm.io.buy := buy
 
   fsm.io.sum := dataPath.io.sum
   fsm.io.coin := dataPath.io.coin
-
-  fsm.io.numOfCan := dataPath.io.numOfCan
-
+  when(dataPath.io.customOut(3) =/= 0.U | dataPath.io.customOut(2) =/= 0.U | dataPath.io.customOut(1) =/= 0.U | dataPath.io.customOut(0) =/= 0.U){
+    fsm.io.empty := true.B
+  } .otherwise {
+    fsm.io.empty := false.B
+  }
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
   for(i <- 0 until 4) {
@@ -84,6 +84,9 @@ class dataPath() extends Module {
     val customOut = Output(Vec(4, UInt(7.W)))
   })
 
+  for(i <- 0 until 4) {
+    io.customOut(i) := 0.U
+  }
   // Define internal wires
   val coinVal = WireDefault(0.U)
 
@@ -108,13 +111,10 @@ class dataPath() extends Module {
     numCanReg := numCanReg - 1.U
   }
   when(numCanReg === 0.U){ //Write Epty when empty
-    io.empty := 1.U
     io.customOut(3) := "b1111001".U //E
     io.customOut(2) := "b1110011".U //P
     io.customOut(1) := "b1111000".U //t
     io.customOut(0) := "b1101110".U //y
-  }.otherwise{
-    io.empty := 0.U
   }
 
 // Connect output pins
@@ -129,12 +129,12 @@ class fsm extends Module{
     val sum = Input(UInt(8.W))
     val buy = Input(Bool())
     val coin = Input(Bool())
+    val empty = Input(Bool())
     //output
     val sub = Output(Bool())
     val add = Output(Bool())
     val alarm = Output(Bool())
     val releaseCan = Output(Bool())
-    val empty = Output(Bool())
   })
 
   // The six states
@@ -155,7 +155,7 @@ class fsm extends Module{
         stateReg := alarm
       }.elsewhen(io.coin){
         stateReg := add
-      } .elsewhen(io.numOfCan === 0.U){
+      } .elsewhen(io.empty){
         stateReg := empty
       }
     }
@@ -190,7 +190,6 @@ class fsm extends Module{
   io.add := stateReg === add
   io.alarm := stateReg === alarm
   io.releaseCan := (stateReg === buyHold)||(stateReg === buy)
-  io.empty := stateReg === empty
 }
 
 // generate Verilog
