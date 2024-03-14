@@ -4,3 +4,7 @@ target
 
 /.metals
 .metals/metals.mv.db
+*.db
+/project
+/target
+/test_run_dir

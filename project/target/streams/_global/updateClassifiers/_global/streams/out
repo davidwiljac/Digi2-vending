@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0msbt-bloop_2.12_1.0-1.5.15-sources.jar no longer exists at C:\Users\Loren\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\ch\epfl\scala\sbt-bloop_2.12_1.0\1.5.15\sbt-bloop_2.12_1.0-1.5.15-sources.jar[0m
+[0m[[0m[33mwarn[0m] [0m[0msbt-bloop_2.12_1.0-1.5.15-sources.jar no longer exists at C:\Users\David\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\ch\epfl\scala\sbt-bloop_2.12_1.0\1.5.15\sbt-bloop_2.12_1.0-1.5.15-sources.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0mnot up to date. inChanged = false, force = false[0m
-[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/C:/Users/David/Desktop/OneDrive%20-%20Danmarks%20Tekniske%20Universitet/Skole%20ting/2%20sem/DIGI%202/Digi-vending/Digi2-vending/project/"), "digi2-vending-build")...[0m
-[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/C:/Users/David/Desktop/OneDrive%20-%20Danmarks%20Tekniske%20Universitet/Skole%20ting/2%20sem/DIGI%202/Digi-vending/Digi2-vending/project/"), "digi2-vending-build")[0m
+[0m[[0m[0mdebug[0m] [0m[0mUpdating ProjectRef(uri("file:/C:/Users/Loren/OneDrive%20-%20Danmarks%20Tekniske%20Universitet/DTU/2.%20semester/Digital%20elektronik%202%2002139/Digi2-vending/project/"), "digi2-vending-build")...[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone updating ProjectRef(uri("file:/C:/Users/Loren/OneDrive%20-%20Danmarks%20Tekniske%20Universitet/DTU/2.%20semester/Digital%20elektronik%202%2002139/Digi2-vending/project/"), "digi2-vending-build")[0m

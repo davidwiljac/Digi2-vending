@@ -15,7 +15,6 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
     val an = Output(UInt(4.W))
   })
 
-  val empty = WireDefault(false.B)
   val coin2 = WireDefault(false.B)
   val coin5 = WireDefault(false.B)
   val buy = WireDefault(false.B)
@@ -51,12 +50,10 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   fsm.io.sum := dataPath.io.sum
   fsm.io.coin := dataPath.io.coin
   fsm.io.empty := dataPath.io.empty
-  }
+  
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
-  for(i <- 0 until 4) {
-    dispMux.io.customIn(i) := 0.U
-  }
+   
   dispMux.io.price := io.price
   dispMux.io.sum := dataPath.io.sum
   dispMux.io.customIn := dataPath.io.customOut
