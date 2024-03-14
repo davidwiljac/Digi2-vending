@@ -50,10 +50,7 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
 
   fsm.io.sum := dataPath.io.sum
   fsm.io.coin := dataPath.io.coin
-  when(dataPath.io.customOut(3) =/= 0.U | dataPath.io.customOut(2) =/= 0.U | dataPath.io.customOut(1) =/= 0.U | dataPath.io.customOut(0) =/= 0.U){
-    fsm.io.empty := true.B
-  } .otherwise {
-    fsm.io.empty := false.B
+  fsm.io.empty := dataPath.io.empty
   }
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
@@ -85,9 +82,6 @@ class dataPath() extends Module {
     val empty = Output(Bool())
   })
 
-  for(i <- 0 until 4) {
-    io.customOut(i) := 0.U
-  }
   // Define internal wires
   val coinVal = WireDefault(0.U)
 
@@ -116,6 +110,10 @@ class dataPath() extends Module {
     io.customOut(2) := "b1110011".U //P
     io.customOut(1) := "b1111000".U //t
     io.customOut(0) := "b1101110".U //y
+  } .otherwise{
+    for(i <- 0 until 4) {
+      io.customOut(i) := 0.U
+    }
   }
 
 // Connect output pins

@@ -3,3 +3,4 @@
 target
 
 /.metals
+.metals/metals.mv.db
