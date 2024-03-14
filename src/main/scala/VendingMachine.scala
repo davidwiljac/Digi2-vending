@@ -79,21 +79,23 @@ class dataPath() extends Module {
     val empty = Output(Bool())
   })
 
-  // Define internal wires
+// Define internal wires
   val coinVal = WireDefault(0.U)
-
-// Define sumReg 
-  val sumReg = RegInit(0.U(7.W))
-
-  val numCanReg = RegInit(10.U(8.W))
 // Configure MUX for wire coinVal
   when(io.coin2 === true.B){
     coinVal := 2.U
   } .elsewhen(io.coin5 === true.B){
     coinVal := 5.U
   }
+
+// Define sumReg 
+  val sumReg = RegInit(0.U(7.W))
+
+// Define numCanReg
+  val numCanReg = RegInit(10.U(8.W))
+
   
-  // Handle input from FSM
+  // MUX form sumReg and numCanReg
   when((io.sub === false.B)&&(io.add === false.B)){ //Idle
     sumReg := sumReg
   }.elsewhen(io.add === true.B){ //Add coin

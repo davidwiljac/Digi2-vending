@@ -8,3 +8,5 @@ target
 /project
 /target
 /test_run_dir
+*.db
+/.metals
