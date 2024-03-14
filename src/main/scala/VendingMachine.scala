@@ -53,7 +53,6 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
-   
   dispMux.io.price := io.price
   dispMux.io.sum := dataPath.io.sum
   dispMux.io.customIn := dataPath.io.customOut
