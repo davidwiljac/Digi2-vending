@@ -20,6 +20,7 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   val alarm = WireDefault(false.B)
   val releaseCan = WireDefault(false.B)
   val coinVal = WireDefault(0.U)
+  val empty = WireDefault(false.B)
 
   val coin2 = WireDefault(false.B)
   val coin5 = WireDefault(false.B)
@@ -42,8 +43,14 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
 // Define sumReg 
   val sumReg = RegInit(0.U(7.W))
 
+  // Define number of cans
+  val numCanReg = RegInit(10.U(8.W))
+
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
+  for(i <- 0 until 4) {
+    dispMux.io.customIn(i) := 0.U
+  }
   dispMux.io.price := io.price
   dispMux.io.sum := sumReg
 
@@ -54,11 +61,14 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   fsm.io.sum := sumReg
   fsm.io.buy := buy
   fsm.io.coin := coin2 || coin5
+  fsm.io.numOfCan := numCanReg
+
 // - output
   sub := fsm.io.sub
   add := fsm.io.add
   alarm := fsm.io.alarm
   releaseCan := fsm.io.releaseCan
+  empty := fsm.io.empty
   
 // Configure MUX for wire coinVal
   when(coin2 === true.B){
@@ -67,21 +77,28 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
     coinVal := 5.U
   }
   
-// Configure MUX for sumReg
-  when((sub === false.B)&&(add === false.B)){
+  // Handle input from FSM
+  when((sub === false.B)&&(add === false.B)){ //Idle
     sumReg := sumReg
-  }.elsewhen(add === true.B){
+  }.elsewhen(add === true.B){ //Add coin
     sumReg := sumReg + coinVal
-  }.elsewhen(sub === true.B) {
+  }.elsewhen(sub === true.B) { //Buy a can
     sumReg := sumReg - io.price
-  } 
+    numCanReg := numCanReg - 1.U
+  }
+  when(empty === true.B){ //Write Epty when empty
+    dispMux.io.customIn(3) := "b1111001".U //E
+    dispMux.io.customIn(2) := "b1110011".U //P
+    dispMux.io.customIn(1) := "b1111000".U //t
+    dispMux.io.customIn(0) := "b1101110".U //y
+
+  }
 
 // Connect output pins
   io.alarm := alarm
   io.releaseCan := releaseCan
   io.seg := dispMux.io.seg
   io.an := dispMux.io.an
-
 }
 
 
@@ -92,16 +109,18 @@ class fsm extends Module{
     val sum = Input(UInt(8.W))
     val buy = Input(Bool())
     val coin = Input(Bool())
+    val numOfCan = Input(UInt(8.W))
     //output
     val sub = Output(Bool())
     val add = Output(Bool())
     val alarm = Output(Bool())
     val releaseCan = Output(Bool())
+    val empty = Output(Bool())
   })
 
   // The six states
   object State extends ChiselEnum {
-  val default, buy, buyHold, alarm, add, addHold = Value
+  val default, buy, buyHold, alarm, add, addHold, empty = Value
   }
 
   import State._
@@ -117,6 +136,8 @@ class fsm extends Module{
         stateReg := alarm
       }.elsewhen(io.coin){
         stateReg := add
+      } .elsewhen(io.numOfCan === 0.U){
+        stateReg := empty
       }
     }
     is(buy){
@@ -140,6 +161,9 @@ class fsm extends Module{
         stateReg:= default
       }
     }
+    is(empty){
+      //Do nothing
+    }
   }
 
   // Output logic
@@ -147,11 +171,12 @@ class fsm extends Module{
   io.add := stateReg === add
   io.alarm := stateReg === alarm
   io.releaseCan := (stateReg === buyHold)||(stateReg === buy)
+  io.empty := stateReg === empty
 }
 
 // generate Verilog
 object VendingMachine extends App {
-  (new chisel3.stage.ChiselStage).emitVerilog(new VendingMachine(100000, 10000000)) // (1kHz display, 0.1 s debounce)(maxCount max 130.000)
+  (new chisel3.stage.ChiselStage).emitVerilog(new VendingMachine(100_000, 10_000_000)) // (1kHz display, 0.1 s debounce)(maxCount max 130.000)
 }
 
 

@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mchisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (VendingMachine.empty: Wire[Bool]) failed @: io.empty in fsm cannot be written from module VendingMachine.[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine.<init>(VendingMachine.scala:65)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine$.$anonfun$new$82(VendingMachine.scala:177)[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mrun[0m) chisel3.internal.ChiselException: Connection between sink (fsm.io.empty: IO[Bool]) and source (VendingMachine.empty: Wire[Bool]) failed @: io.empty in fsm cannot be written from module VendingMachine.[0m

@@ -1,13 +1,17 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\main\scala\VendingMachine.scala:54:21: value coin2 is not a member of chisel3.Bundle{val price: chisel3.UInt; val coin2Raw: chisel3.Bool; val coin5Raw: chisel3.Bool; val buy: chisel3.Bool; val releaseCan: chisel3.Bool; val alarm: chisel3.Bool; val seg: chisel3.UInt; val an: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m  fsm.io.coin := io.coin2 || io.coin5[0m
-[0m[[0m[31merror[0m] [0m[0m                    ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\main\scala\VendingMachine.scala:54:33: value coin5 is not a member of chisel3.Bundle{val price: chisel3.UInt; val coin2Raw: chisel3.Bool; val coin5Raw: chisel3.Bool; val buy: chisel3.Bool; val releaseCan: chisel3.Bool; val alarm: chisel3.Bool; val seg: chisel3.UInt; val an: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m  fsm.io.coin := io.coin2 || io.coin5[0m
-[0m[[0m[31merror[0m] [0m[0m                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\main\scala\VendingMachine.scala:62:11: value coin2 is not a member of chisel3.Bundle{val price: chisel3.UInt; val coin2Raw: chisel3.Bool; val coin5Raw: chisel3.Bool; val buy: chisel3.Bool; val releaseCan: chisel3.Bool; val alarm: chisel3.Bool; val seg: chisel3.UInt; val an: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m  when(io.coin2 === true.B){[0m
-[0m[[0m[31merror[0m] [0m[0m          ^[0m
-[0m[[0m[31merror[0m] [0m[0mC:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\chisel-lab\vending\src\main\scala\VendingMachine.scala:64:18: value coin5 is not a member of chisel3.Bundle{val price: chisel3.UInt; val coin2Raw: chisel3.Bool; val coin5Raw: chisel3.Bool; val buy: chisel3.Bool; val releaseCan: chisel3.Bool; val alarm: chisel3.Bool; val seg: chisel3.UInt; val an: chisel3.UInt}[0m
-[0m[[0m[31merror[0m] [0m[0m  } .elsewhen(io.coin5 === true.B){[0m
-[0m[[0m[31merror[0m] [0m[0m                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mfour errors found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala:54:32: value Or is not a member of chisel3.Bool[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean orR?[0m
+[0m[[0m[31merror[0m] [0m[0m  when (io.customIn(0) =/= 0.U Or io.customIn(1) =/= 0.U Or io.customIn(2) =/= 0.U Or io.customIn(3) =/= 0.U){[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:88:13: value customIn is not a member of DisplayMultiplexer[0m
+[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(0) := "b1111001".U //E[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:89:13: value customIn is not a member of DisplayMultiplexer[0m
+[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(1) := "b1110011".U //P[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:90:13: value customIn is not a member of DisplayMultiplexer[0m
+[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(2) := "b1111000".U //t[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala:91:13: value customIn is not a member of DisplayMultiplexer[0m
+[0m[[0m[31merror[0m] [0m[0m    dispMux.customIn(3) := "b1101110".U //y[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

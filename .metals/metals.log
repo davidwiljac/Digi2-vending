@@ -14898,3 +14898,356 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequ
 	at java.lang.Thread.run(Thread.java:840)
 
 2024.03.14 15:05:31 INFO  Exiting server
+2024.03.14 15:17:08 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending' for client Visual Studio Code 1.87.1.
+15:17:08.979 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+15:17:08.981 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+15:17:08.982 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+15:17:08.985 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+15:17:08.985 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:17:08.985 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+15:17:08.985 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+15:17:08.985 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:17:08.986 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/David/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+15:17:08.989 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+15:17:08.994 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:17:08.994 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+15:17:08.995 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+15:17:08.995 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+15:17:08.995 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+15:17:09.073 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\metals (H2 2.2)
+15:17:09.073 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+15:17:09.073 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+15:17:09.074 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+15:17:09.075 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+15:17:09.080 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+15:17:09.081 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+15:17:09.082 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:17:09.090 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+15:17:09.094 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:17:09.101 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:17:09.102 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:17:09.102 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:17:09.102 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:17:09.102 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:17:09.103 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:17:09.103 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:17:09.103 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:17:09.103 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:17:09.103 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:17:09.114 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.023s)
+15:17:09.118 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+15:17:09.125 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+15:17:09.129 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+15:17:09.139 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 35 of 100M
+2024.03.14 15:17:10 WARN  Build server is not auto-connectable.
+mar. 14, 2024 3:17:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2024.03.14 15:17:15 INFO  no build target found for C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.03.14 15:17:16 INFO  time: code lens generation in 6.73s
+2024.03.14 15:17:16 INFO  time: code lens generation in 1.35s
+2024.03.14 15:17:16 INFO  time: code lens generation in 6.75s
+mar. 14, 2024 3:18:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 82
+mar. 14, 2024 3:18:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 121
+mar. 14, 2024 3:26:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 393
+mar. 14, 2024 3:26:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 402
+2024.03.14 15:27:00 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+mar. 14, 2024 3:27:51 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 571
+mar. 14, 2024 3:28:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 583
+mar. 14, 2024 3:28:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 657
+mar. 14, 2024 3:30:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 752
+2024.03.14 15:30:44 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:32:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 799
+mar. 14, 2024 3:33:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 811
+2024.03.14 15:33:49 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+2024.03.14 15:33:52 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 3:33:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 908
+2024.03.14 15:33:52 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:33:52 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:33:52 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:33:52 WARN  Using indexes to guess the definition of coin2Deb
+2024.03.14 15:34:36 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+mar. 14, 2024 3:35:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1019
+2024.03.14 15:35:20 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:35:53 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:36:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1091
+mar. 14, 2024 3:36:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+mar. 14, 2024 3:37:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1148
+mar. 14, 2024 3:37:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1156
+mar. 14, 2024 3:37:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1171
+2024.03.14 15:41:14 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 3:42:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1928
+2024.03.14 15:44:35 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 3:45:00 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\.reports\metals-full\2024-03-14\r_compiler-error_15-45-00-410.md
+2024.03.14 15:45:07 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:45:59 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 3:46:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2363
+mar. 14, 2024 3:46:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2426
+2024.03.14 15:47:55 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:47:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2754
+mar. 14, 2024 3:49:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2840
+mar. 14, 2024 3:49:36 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\.reports\metals-full\2024-03-14\r_compiler-error_15-49-36-450.md
+mar. 14, 2024 3:49:53 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\.reports\metals-full\2024-03-14\r_compiler-error_15-49-53-921.md
+2024.03.14 15:50:01 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+2024.03.14 15:50:02 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:50:10 INFO  Shutting down server
+2024.03.14 15:50:10 INFO  shutting down Metals
+2024.03.14 15:50:10 INFO  Exiting server
+2024.03.14 15:50:25 INFO  Started: Metals version 1.2.2 in folders 'C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending' for client Visual Studio Code 1.87.2.
+15:50:25.752 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- Flyway Community Edition 9.22.3 by Redgate
+15:50:25.755 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- See release notes here: https://rd.gt/416ObMi
+15:50:25.755 [pool-1-thread-1] INFO org.flywaydb.core.internal.license.VersionPrinter -- 
+15:50:25.758 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/callback' ...
+15:50:25.759 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/callback using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:50:25.759 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Unable to resolve location classpath:db/callback.
+15:50:25.759 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classpath resources at 'classpath:db/migration' ...
+15:50:25.759 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Determining location urls for classpath:db/migration using ClassLoader jdk.internal.loader.ClassLoaders$AppClassLoader@c387f44 ...
+15:50:25.759 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning URL: jar:file:/C:/Users/David/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/org/scalameta/metals_2.13/1.2.2/metals_2.13-1.2.2.jar!/db/migration
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V1__Create_tables.sql
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V2__Server_discovery.sql
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V3__Jar_symbols.sql
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Found resource: db/migration/V4__Fingerprints.sql
+15:50:25.762 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.classpath.ClassPathScanner -- Scanning for classes at classpath:db/migration
+15:50:25.766 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:50:25.766 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V3__Jar_symbols.sql
+15:50:25.767 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V4__Fingerprints.sql
+15:50:25.768 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V2__Server_discovery.sql
+15:50:25.768 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.resource.ResourceNameValidator -- Validating V1__Create_tables.sql
+15:50:25.852 [pool-1-thread-1] INFO org.flywaydb.core.FlywayExecutor -- Database: jdbc:h2:file:C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\metals (H2 2.2)
+15:50:25.852 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Driver: H2 JDBC Driver 2.2.224 (2023-09-17)
+15:50:25.852 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- DDL Transactions Supported: false
+15:50:25.853 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Schemas: 
+15:50:25.853 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.schemahistory.SchemaHistoryFactory -- Default schema: null
+15:50:25.858 [pool-1-thread-1] WARN org.flywaydb.core.internal.database.base.Database -- Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+15:50:25.859 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.callback.SqlScriptCallbackFactory -- Scanning for SQL callbacks ...
+15:50:25.859 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:50:25.865 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbValidate -- Validating migrations ...
+15:50:25.868 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:50:25.875 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:50:25.875 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:50:25.875 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:50:25.875 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:50:25.875 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:50:25.876 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V3__Jar_symbols.sql (filename: V3__Jar_symbols.sql)
+15:50:25.876 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/ (filename: )
+15:50:25.876 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V4__Fingerprints.sql (filename: V4__Fingerprints.sql)
+15:50:25.876 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V2__Server_discovery.sql (filename: V2__Server_discovery.sql)
+15:50:25.876 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.scanner.Scanner -- Filtering out resource: db/migration/V1__Create_tables.sql (filename: V1__Create_tables.sql)
+15:50:25.888 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbValidate -- Successfully validated 4 migrations (execution time 00:00.022s)
+15:50:25.890 [pool-1-thread-1] DEBUG org.flywaydb.core.internal.command.DbSchemas -- Skipping creation of existing schema: "PUBLIC"
+15:50:25.896 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Current version of schema "PUBLIC": 4
+15:50:25.899 [pool-1-thread-1] INFO org.flywaydb.core.internal.command.DbMigrate -- Schema "PUBLIC" is up to date. No migration necessary.
+15:50:25.910 [pool-1-thread-1] DEBUG org.flywaydb.core.FlywayExecutor -- Memory usage: 36 of 100M
+2024.03.14 15:50:26 WARN  Build server is not auto-connectable.
+mar. 14, 2024 3:50:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+2024.03.14 15:50:32 INFO  no build target found for C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.03.14 15:50:34 INFO  time: code lens generation in 3.02s
+2024.03.14 15:50:34 INFO  time: code lens generation in 7.01s
+2024.03.14 15:50:34 INFO  time: code lens generation in 7.21s
+2024.03.14 15:50:34 INFO  time: code lens generation in 7.21s
+2024.03.14 15:50:34 INFO  time: code lens generation in 1.37s
+2024.03.14 15:50:34 INFO  time: code lens generation in 4.16s
+2024.03.14 15:50:37 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:50:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 68
+mar. 14, 2024 3:50:40 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\.reports\metals-full\2024-03-14\r_compiler-error_15-50-40-666.md
+2024.03.14 15:50:50 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+2024.03.14 15:50:57 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:51:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 145
+2024.03.14 15:51:42 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+2024.03.14 15:52:19 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:52:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 341
+2024.03.14 15:52:23 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 15:52:31 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 3:52:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 405
+2024.03.14 15:55:22 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 3:56:18 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 616
+2024.03.14 15:58:01 WARN  Using indexes to guess the definition of io
+2024.03.14 15:58:03 WARN  Using indexes to guess the definition of io
+mar. 14, 2024 3:58:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 861
+mar. 14, 2024 3:58:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 888
+mar. 14, 2024 3:59:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 955
+2024.03.14 16:00:12 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 4:00:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1072
+2024.03.14 16:00:47 WARN  Using indexes to guess the definition of io
+2024.03.14 16:00:48 WARN  Using indexes to guess the definition of io
+2024.03.14 16:00:50 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 4:01:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1123
+mar. 14, 2024 4:02:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1221
+mar. 14, 2024 4:02:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1235
+2024.03.14 16:02:37 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 4:02:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1322
+mar. 14, 2024 4:03:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1339
+2024.03.14 16:03:16 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 16:03:34 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 16:03:49 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\DisplayMultiplexer.scala
+mar. 14, 2024 4:04:14 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1482
+2024.03.14 16:04:36 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 4:04:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1563
+2024.03.14 16:05:09 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+2024.03.14 16:17:07 WARN  Using indexes to guess the definition of numCanReg
+2024.03.14 16:17:08 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 4:17:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1672
+mar. 14, 2024 4:17:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1676
+2024.03.14 16:17:08 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+mar. 14, 2024 4:23:12 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1740
+2024.03.14 16:23:24 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+2024.03.14 16:23:57 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\SevenSegDec.scala
+mar. 14, 2024 4:29:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2004
+mar. 14, 2024 4:29:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2018
+mar. 14, 2024 4:30:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2286
+mar. 14, 2024 4:30:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2390
+2024.03.14 16:31:15 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+mar. 14, 2024 4:31:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2539
+2024.03.14 16:32:48 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+2024.03.14 16:32:49 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\main\scala\VendingMachine.scala
+mar. 14, 2024 4:32:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2809
+mar. 14, 2024 4:34:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2911
+mar. 14, 2024 4:35:03 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3057
+2024.03.14 16:35:13 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+2024.03.14 16:38:44 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+2024.03.14 16:39:13 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+mar. 14, 2024 4:39:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3720
+mar. 14, 2024 4:40:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3752
+mar. 14, 2024 4:40:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3768
+2024.03.14 16:40:27 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+mar. 14, 2024 4:41:02 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3996
+2024.03.14 16:42:10 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+mar. 14, 2024 4:42:41 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\.metals\.reports\metals-full\2024-03-14\r_compiler-error_16-42-41-589.md
+mar. 14, 2024 4:42:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4359
+mar. 14, 2024 4:43:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4434
+mar. 14, 2024 4:43:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4462
+mar. 14, 2024 4:44:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4660
+2024.03.14 16:45:27 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+mar. 14, 2024 4:46:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4982
+2024.03.14 16:46:32 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+2024.03.14 16:47:00 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+2024.03.14 16:47:24 ERROR Failed to tokenize input for semantic tokens for C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+scala.meta.tokenizers.TokenizeException: <input>:88: error: unclosed comment
+  /*
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.14 16:47:30 ERROR Failed to tokenize input for semantic tokens for C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala
+scala.meta.tokenizers.TokenizeException: <input>:88: error: unclosed comment
+  /*
+  ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipNestedComments(LegacyScanner.scala:52)
+	at scala.meta.internal.tokenizers.LegacyScanner.skipToCommentEnd(LegacyScanner.scala:71)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:313)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:840)
+
+2024.03.14 16:47:31 WARN  no build target for: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\src\test\scala\VendingTester.scala

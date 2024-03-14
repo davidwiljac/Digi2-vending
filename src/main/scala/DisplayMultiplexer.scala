@@ -3,6 +3,7 @@ import chisel3.util._
 
 class DisplayMultiplexer(maxCount: Int) extends Module {
   val io = IO(new Bundle {
+    val customIn = Input(Vec(4, UInt(7.W)))
     val sum = Input(UInt(7.W))
     val price = Input(UInt(5.W))
     val seg = Output(UInt(7.W))
@@ -10,16 +11,14 @@ class DisplayMultiplexer(maxCount: Int) extends Module {
   })
 
   val sevSeg = WireDefault("b1111111".U(7.W))
-  // val select = WireDefault("b0001".U(4.W))
-
-  // *** your code starts here
-
   val selectReg = RegInit(0.U(2.W))
 
   val table = Module(new BcdTable())
   table.io.address := 0.U
 
   val decoder = Module(new SevenSegDec())
+  decoder.io.custom := 0.U
+  decoder.io.customIn := 0.U
   decoder.io.in := 0.U
   sevSeg := decoder.io.out
 
@@ -51,6 +50,11 @@ class DisplayMultiplexer(maxCount: Int) extends Module {
     }
   }
 
+  // Handles custom input
+  when (io.customIn(0) =/= 0.U | io.customIn(1) =/= 0.U | io.customIn(2) =/= 0.U | io.customIn(3) =/= 0.U){
+    decoder.io.custom := 1.U
+    decoder.io.customIn := io.customIn(selectReg)
+  }
   // *** your code ends here
 
   io.seg := sevSeg
