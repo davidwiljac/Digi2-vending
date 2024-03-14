@@ -82,6 +82,7 @@ class dataPath() extends Module {
     val sum = Output(UInt(7.W))
     val coin = Output(Bool())
     val customOut = Output(Vec(4, UInt(7.W)))
+    val empty = Output(Bool())
   })
 
   for(i <- 0 until 4) {
@@ -120,6 +121,7 @@ class dataPath() extends Module {
 // Connect output pins
   io.sum := sumReg
   io.coin := (io.coin2 || io.coin5)
+  io.empty := (numCanReg === 0.U)
 }
 
 class fsm extends Module{
