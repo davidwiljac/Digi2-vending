@@ -5,6 +5,8 @@ class SevenSegDec extends Module {
   val io = IO(new Bundle {
     val in = Input(UInt(4.W))
     val out = Output(UInt(7.W))
+    val custom = Input(Bool())
+    val customIn = Input(UInt(7.W))
   })
 
   val sevSeg = WireDefault(0.U(7.W))
@@ -28,6 +30,7 @@ class SevenSegDec extends Module {
     is(14.U) { sevSeg := "b1111001".U } //E
     is(15.U) { sevSeg := "b1110001".U } //F
   }
+  when(io.custom === 1.U){sevSeg := io.customIn}
   // *** end adding the table
 
   io.out := ~sevSeg

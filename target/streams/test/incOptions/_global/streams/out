@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\target\scala-2.13\test-classes.bak[0m
 [0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VendingSimulation$$anon$1$$anon$3$$anon$7.class[0m
@@ -63,3 +64,13 @@
 [0m[[0m[0mdebug[0m] [0m[0m	VendingSimulation$$anon$1$$anon$3$$anon$5$$anonfun$2.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	VendingSimulation$$anon$1$$anon$3$$anon$4$$anonfun$1.class[0m
 [0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\Loren\OneDrive - Danmarks Tekniske Universitet\DTU\2. semester\Digital elektronik 2 02139\Digi2-vending\target\scala-2.13\test-classes.bak[0m
+=======
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\target\scala-2.13\test-classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VendingTester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VendingTester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	VendingTester.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: C:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi2-vending\target\scala-2.13\test-classes.bak[0m
+>>>>>>> David

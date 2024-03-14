@@ -43,6 +43,7 @@
     "class":"chisel3.experimental.EnumAnnotations$EnumDefAnnotation",
     "typeName":"fsm$State",
     "definition":{
+      "empty":6,
       "default":0,
       "add":4,
       "addHold":5,

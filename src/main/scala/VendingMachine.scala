@@ -14,8 +14,8 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
     val seg = Output(UInt(7.W))
     val an = Output(UInt(4.W))
   })
-  
-  // Define internal wires for debounced button inputs
+
+  val empty = WireDefault(false.B)
   val coin2 = WireDefault(false.B)
   val coin5 = WireDefault(false.B)
   val buy = WireDefault(false.B)
@@ -45,19 +45,25 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   dataPath.io.sub := fsm.io.sub
   dataPath.io.add := fsm.io.add
 
+  dataPath.io.empty := fsm.io.empty
+  
   fsm.io.price := io.price
   fsm.io.buy := buy
 
   fsm.io.sum := dataPath.io.sum
   fsm.io.coin := dataPath.io.coin
 
+  fsm.io.numOfCan := dataPath.io.numOfCan
 
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
+  for(i <- 0 until 4) {
+    dispMux.io.customIn(i) := 0.U
+  }
   dispMux.io.price := io.price
   dispMux.io.sum := dataPath.io.sum
+  dispMux.io.customIn := dataPath.io.customOut
   
-
 // Connect output pins
   io.alarm := fsm.io.alarm
   io.releaseCan := fsm.io.releaseCan
@@ -73,9 +79,9 @@ class dataPath() extends Module {
     val coin5 = Input(Bool())
     val sub = Input(Bool())
     val add = Input(Bool())
-
     val sum = Output(UInt(7.W))
     val coin = Output(Bool())
+    val customOut = Output(Vec(4, UInt(7.W)))
   })
 
   // Define internal wires
@@ -84,6 +90,7 @@ class dataPath() extends Module {
 // Define sumReg 
   val sumReg = RegInit(0.U(7.W))
 
+  val numCanReg = RegInit(10.U(8.W))
 // Configure MUX for wire coinVal
   when(io.coin2 === true.B){
     coinVal := 2.U
@@ -91,19 +98,28 @@ class dataPath() extends Module {
     coinVal := 5.U
   }
   
-// Configure MUX for sumReg
-  when((io.sub === false.B)&&(io.add === false.B)){
+  // Handle input from FSM
+  when((io.sub === false.B)&&(io.add === false.B)){ //Idle
     sumReg := sumReg
-  }.elsewhen(io.add === true.B){
+  }.elsewhen(io.add === true.B){ //Add coin
     sumReg := sumReg + coinVal
-  }.elsewhen(io.sub === true.B) {
+  }.elsewhen(io.sub === true.B) { //Buy a can
     sumReg := sumReg - io.price
-  } 
+    numCanReg := numCanReg - 1.U
+  }
+  when(numCanReg === 0.U){ //Write Epty when empty
+    io.empty := 1.U
+    io.customOut(3) := "b1111001".U //E
+    io.customOut(2) := "b1110011".U //P
+    io.customOut(1) := "b1111000".U //t
+    io.customOut(0) := "b1101110".U //y
+  }.otherwise{
+    io.empty := 0.U
+  }
 
 // Connect output pins
   io.sum := sumReg
   io.coin := (io.coin2 || io.coin5)
-
 }
 
 class fsm extends Module{
@@ -113,17 +129,17 @@ class fsm extends Module{
     val sum = Input(UInt(8.W))
     val buy = Input(Bool())
     val coin = Input(Bool())
-
     //output
     val sub = Output(Bool())
     val add = Output(Bool())
     val alarm = Output(Bool())
     val releaseCan = Output(Bool())
+    val empty = Output(Bool())
   })
 
   // The six states
   object State extends ChiselEnum {
-  val default, buy, buyHold, alarm, add, addHold = Value
+  val default, buy, buyHold, alarm, add, addHold, empty = Value
   }
 
   import State._
@@ -139,6 +155,8 @@ class fsm extends Module{
         stateReg := alarm
       }.elsewhen(io.coin){
         stateReg := add
+      } .elsewhen(io.numOfCan === 0.U){
+        stateReg := empty
       }
     }
     is(buy){
@@ -162,6 +180,9 @@ class fsm extends Module{
         stateReg:= default
       }
     }
+    is(empty){
+      //Do nothing
+    }
   }
 
   // Output logic
@@ -169,11 +190,12 @@ class fsm extends Module{
   io.add := stateReg === add
   io.alarm := stateReg === alarm
   io.releaseCan := (stateReg === buyHold)||(stateReg === buy)
+  io.empty := stateReg === empty
 }
 
 // generate Verilog
 object VendingMachine extends App {
-  (new chisel3.stage.ChiselStage).emitVerilog(new VendingMachine(100000, 10000000)) // (1kHz display, 0.1 s debounce)(maxCount max 130.000)
+  (new chisel3.stage.ChiselStage).emitVerilog(new VendingMachine(100_000, 10_000_000)) // (1kHz display, 0.1 s debounce)(maxCount max 130.000)
 }
 
 
