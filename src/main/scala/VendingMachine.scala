@@ -182,7 +182,7 @@ class fsm extends Module{
       //Do nothing
     }
   }
-
+  // Tester
   // Output logic
   io.sub:= stateReg === buy
   io.add := stateReg === add
