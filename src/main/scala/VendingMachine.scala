@@ -2,6 +2,7 @@ import chisel3._
 import chisel3.util._
 import dataclass.data
 
+// Asger Tester
 class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for displayMultiplexer, c for debouncer
   val io = IO(new Bundle {
     val price = Input(UInt(5.W))
