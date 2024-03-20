@@ -1,6 +1,7 @@
 import chisel3._
 import chisel3.util._
 import dataclass.data
+import javax.xml.crypto.Data
 
 class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for displayMultiplexer, c for debouncer
   val io = IO(new Bundle {
@@ -93,7 +94,7 @@ class dataPath() extends Module {
 // Define sumReg 
   val sumReg = RegInit(0.U(7.W))
 
-  val numCanReg = RegInit(10.U(8.W))
+  val numCanReg = RegInit(3.U(8.W))
 // Configure MUX for wire coinVal
   when(io.coin2 === true.B){
     coinVal := 2.U
@@ -109,12 +110,34 @@ class dataPath() extends Module {
   }.elsewhen(io.sub === true.B) { //Buy a can
     sumReg := sumReg - io.price
     numCanReg := numCanReg - 1.U
+    println("numCanReg: " + numCanReg)
   }
+  val scrollReg = RegInit(0.U(32.W))
   when(numCanReg === 0.U){ //Write Epty when empty
-    io.customOut(3) := "b1111001".U //E
-    io.customOut(2) := "b1110011".U //P
-    io.customOut(1) := "b1111000".U //t
-    io.customOut(0) := "b1101110".U //y
+    val selector1 = RegInit(0.U(4.W))
+    val selector2 = RegInit(1.U(4.W))
+    val selector3 = RegInit(2.U(4.W))
+    val selector4 = RegInit(3.U(4.W))
+    scrollReg := scrollReg + 1.U
+    when(scrollReg === 50_000_000.U){
+      scrollReg := 0.U
+      selector1 := selector1 + 1.U
+      selector2 := selector2 + 1.U
+      selector3 := selector3 + 1.U
+      selector4 := selector4 + 1.U
+      when(selector1 === 17.U){selector1 := 0.U}
+      when(selector2 === 17.U){selector2 := 0.U}
+      when(selector3 === 17.U){selector3 := 0.U}
+      when(selector4 === 17.U){selector4 := 0.U}
+    }
+    val word = VecInit(Seq("b0000000".U,"b0000000".U,"b0000000".U,
+                          "b1010100".U, "b0111111".U, "b0000000".U, //NO
+                          "b0111001".U, "b1110111".U, "b1010100".U, "b1101101".U, "b0000000".U, //CANS
+                          "b0111000".U, "b1111001".U, "b1110001".U, "b1111000".U, "b0000000".U)) //LEFT
+    io.customOut(3) := word(selector1)
+    io.customOut(2) := word(selector2)
+    io.customOut(1) := word(selector3)
+    io.customOut(0) := word(selector4)
   }
 
 // Connect output pins

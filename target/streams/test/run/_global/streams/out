@@ -1,20 +1,20 @@
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.PassExceptions: [0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[3] <= mux(_T_7, UInt<7>("h79"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[2] <= mux(_T_7, UInt<7>("h73"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[1] <= mux(_T_7, UInt<7>("h78"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[0] <= mux(_T_7, UInt<7>("h6e"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.PassException: 4 errors detected![0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mrun[0m) firrtl.passes.PassExceptions: [0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[3] <= mux(_T_7, UInt<7>("h79"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[2] <= mux(_T_7, UInt<7>("h73"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[1] <= mux(_T_7, UInt<7>("h78"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.CheckInitialization$RefNotInitializedException:  : [module dataPath]  Reference io is not fully initialized.[0m
-[0m[[0m[31merror[0m] [0m[0m   : io.customOut[0] <= mux(_T_7, UInt<7>("h6e"), VOID)[0m
-[0m[[0m[31merror[0m] [0m[0mfirrtl.passes.PassException: 4 errors detected![0m
+[0m[[0m[31merror[0m] [0m[0mjava.lang.IndexOutOfBoundsException: 2[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at dataPath.$anonfun$new$53(VendingMachine.scala:121)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.<init>(When.scala:143)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.when$.apply(When.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at dataPath.$anonfun$new$48(VendingMachine.scala:118)[0m
+[0m[[0m[31merror[0m] [0m[0m	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.WhenContext.<init>(When.scala:143)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.when$.apply(When.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at dataPath.<init>(VendingMachine.scala:114)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine.$anonfun$dataPath$2(VendingMachine.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.Module$.do_apply(Module.scala:53)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine.$anonfun$dataPath$1(VendingMachine.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine.<init>(VendingMachine.scala:38)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingSimulation$.$anonfun$new$2(VendingSimulation.scala:137)[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mrun[0m) java.lang.IndexOutOfBoundsException: 2[0m

@@ -160,6 +160,329 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
+module dataPath(
+  input        clock,
+  input        reset,
+  input  [4:0] io_price,
+  input        io_coin2,
+  input        io_coin5,
+  input        io_sub,
+  input        io_add,
+  output [6:0] io_sum,
+  output       io_coin,
+  output [6:0] io_customOut_0,
+  output [6:0] io_customOut_1,
+  output [6:0] io_customOut_2,
+  output [6:0] io_customOut_3
+);
+`ifdef RANDOMIZE_REG_INIT
+  reg [31:0] _RAND_0;
+  reg [31:0] _RAND_1;
+  reg [31:0] _RAND_2;
+  reg [31:0] _RAND_3;
+  reg [31:0] _RAND_4;
+  reg [31:0] _RAND_5;
+  reg [31:0] _RAND_6;
+`endif // RANDOMIZE_REG_INIT
+  reg [6:0] sumReg; // @[VendingMachine.scala 95:23]
+  reg [7:0] numCanReg; // @[VendingMachine.scala 97:26]
+  wire [2:0] _GEN_0 = io_coin5 ? 3'h5 : 3'h0; // @[VendingMachine.scala 101:35 102:13 92:28]
+  wire [2:0] coinVal = io_coin2 ? 3'h2 : _GEN_0; // @[VendingMachine.scala 100:13 99:28]
+  wire [6:0] _GEN_90 = {{4'd0}, coinVal}; // @[VendingMachine.scala 109:22]
+  wire [6:0] _sumReg_T_1 = sumReg + _GEN_90; // @[VendingMachine.scala 109:22]
+  wire [6:0] _GEN_91 = {{2'd0}, io_price}; // @[VendingMachine.scala 111:22]
+  wire [6:0] _sumReg_T_3 = sumReg - _GEN_91; // @[VendingMachine.scala 111:22]
+  wire [7:0] _numCanReg_T_1 = numCanReg - 8'h1; // @[VendingMachine.scala 112:28]
+  reg [31:0] scrollReg; // @[VendingMachine.scala 115:26]
+  reg [3:0] selector1; // @[VendingMachine.scala 117:28]
+  reg [3:0] selector2; // @[VendingMachine.scala 118:28]
+  reg [3:0] selector3; // @[VendingMachine.scala 119:28]
+  reg [3:0] selector4; // @[VendingMachine.scala 120:28]
+  wire [31:0] _scrollReg_T_1 = scrollReg + 32'h1; // @[VendingMachine.scala 121:28]
+  wire [3:0] _selector1_T_1 = selector1 + 4'h1; // @[VendingMachine.scala 124:30]
+  wire [3:0] _selector2_T_1 = selector2 + 4'h1; // @[VendingMachine.scala 125:30]
+  wire [3:0] _selector3_T_1 = selector3 + 4'h1; // @[VendingMachine.scala 126:30]
+  wire [3:0] _selector4_T_1 = selector4 + 4'h1; // @[VendingMachine.scala 127:30]
+  wire [4:0] _GEN_92 = {{1'd0}, selector1}; // @[VendingMachine.scala 128:22]
+  wire [4:0] _GEN_93 = {{1'd0}, selector2}; // @[VendingMachine.scala 129:22]
+  wire [4:0] _GEN_94 = {{1'd0}, selector3}; // @[VendingMachine.scala 130:22]
+  wire [4:0] _GEN_95 = {{1'd0}, selector4}; // @[VendingMachine.scala 131:22]
+  wire [6:0] _GEN_21 = 4'h4 == selector1 ? 7'h54 : 7'h0; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_22 = 4'h5 == selector1 ? 7'h3f : _GEN_21; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_23 = 4'h6 == selector1 ? 7'h0 : _GEN_22; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_24 = 4'h7 == selector1 ? 7'h39 : _GEN_23; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_25 = 4'h8 == selector1 ? 7'h77 : _GEN_24; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_26 = 4'h9 == selector1 ? 7'h54 : _GEN_25; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_27 = 4'ha == selector1 ? 7'h6d : _GEN_26; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_28 = 4'hb == selector1 ? 7'h0 : _GEN_27; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_29 = 4'hc == selector1 ? 7'h38 : _GEN_28; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_30 = 4'hd == selector1 ? 7'h79 : _GEN_29; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_31 = 4'he == selector1 ? 7'h71 : _GEN_30; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_32 = 4'hf == selector1 ? 7'h78 : _GEN_31; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_33 = 5'h10 == _GEN_92 ? 7'h0 : _GEN_32; // @[VendingMachine.scala 137:{21,21}]
+  wire [6:0] _GEN_38 = 4'h4 == selector2 ? 7'h54 : 7'h0; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_39 = 4'h5 == selector2 ? 7'h3f : _GEN_38; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_40 = 4'h6 == selector2 ? 7'h0 : _GEN_39; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_41 = 4'h7 == selector2 ? 7'h39 : _GEN_40; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_42 = 4'h8 == selector2 ? 7'h77 : _GEN_41; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_43 = 4'h9 == selector2 ? 7'h54 : _GEN_42; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_44 = 4'ha == selector2 ? 7'h6d : _GEN_43; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_45 = 4'hb == selector2 ? 7'h0 : _GEN_44; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_46 = 4'hc == selector2 ? 7'h38 : _GEN_45; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_47 = 4'hd == selector2 ? 7'h79 : _GEN_46; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_48 = 4'he == selector2 ? 7'h71 : _GEN_47; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_49 = 4'hf == selector2 ? 7'h78 : _GEN_48; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_50 = 5'h10 == _GEN_93 ? 7'h0 : _GEN_49; // @[VendingMachine.scala 138:{21,21}]
+  wire [6:0] _GEN_55 = 4'h4 == selector3 ? 7'h54 : 7'h0; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_56 = 4'h5 == selector3 ? 7'h3f : _GEN_55; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_57 = 4'h6 == selector3 ? 7'h0 : _GEN_56; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_58 = 4'h7 == selector3 ? 7'h39 : _GEN_57; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_59 = 4'h8 == selector3 ? 7'h77 : _GEN_58; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_60 = 4'h9 == selector3 ? 7'h54 : _GEN_59; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_61 = 4'ha == selector3 ? 7'h6d : _GEN_60; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_62 = 4'hb == selector3 ? 7'h0 : _GEN_61; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_63 = 4'hc == selector3 ? 7'h38 : _GEN_62; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_64 = 4'hd == selector3 ? 7'h79 : _GEN_63; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_65 = 4'he == selector3 ? 7'h71 : _GEN_64; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_66 = 4'hf == selector3 ? 7'h78 : _GEN_65; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_67 = 5'h10 == _GEN_94 ? 7'h0 : _GEN_66; // @[VendingMachine.scala 139:{21,21}]
+  wire [6:0] _GEN_72 = 4'h4 == selector4 ? 7'h54 : 7'h0; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_73 = 4'h5 == selector4 ? 7'h3f : _GEN_72; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_74 = 4'h6 == selector4 ? 7'h0 : _GEN_73; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_75 = 4'h7 == selector4 ? 7'h39 : _GEN_74; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_76 = 4'h8 == selector4 ? 7'h77 : _GEN_75; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_77 = 4'h9 == selector4 ? 7'h54 : _GEN_76; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_78 = 4'ha == selector4 ? 7'h6d : _GEN_77; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_79 = 4'hb == selector4 ? 7'h0 : _GEN_78; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_80 = 4'hc == selector4 ? 7'h38 : _GEN_79; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_81 = 4'hd == selector4 ? 7'h79 : _GEN_80; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_82 = 4'he == selector4 ? 7'h71 : _GEN_81; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_83 = 4'hf == selector4 ? 7'h78 : _GEN_82; // @[VendingMachine.scala 140:{21,21}]
+  wire [6:0] _GEN_84 = 5'h10 == _GEN_95 ? 7'h0 : _GEN_83; // @[VendingMachine.scala 140:{21,21}]
+  assign io_sum = sumReg; // @[VendingMachine.scala 144:10]
+  assign io_coin = io_coin2 | io_coin5; // @[VendingMachine.scala 145:24]
+  assign io_customOut_0 = numCanReg == 8'h0 ? _GEN_84 : 7'h0; // @[VendingMachine.scala 116:26 140:21 89:21]
+  assign io_customOut_1 = numCanReg == 8'h0 ? _GEN_67 : 7'h0; // @[VendingMachine.scala 116:26 139:21 89:21]
+  assign io_customOut_2 = numCanReg == 8'h0 ? _GEN_50 : 7'h0; // @[VendingMachine.scala 116:26 138:21 89:21]
+  assign io_customOut_3 = numCanReg == 8'h0 ? _GEN_33 : 7'h0; // @[VendingMachine.scala 116:26 137:21 89:21]
+  always @(posedge clock) begin
+    if (reset) begin // @[VendingMachine.scala 95:23]
+      sumReg <= 7'h0; // @[VendingMachine.scala 95:23]
+    end else if (!(~io_sub & ~io_add)) begin // @[VendingMachine.scala 106:51]
+      if (io_add) begin // @[VendingMachine.scala 108:32]
+        sumReg <= _sumReg_T_1; // @[VendingMachine.scala 109:12]
+      end else if (io_sub) begin // @[VendingMachine.scala 110:33]
+        sumReg <= _sumReg_T_3; // @[VendingMachine.scala 111:12]
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 97:26]
+      numCanReg <= 8'h3; // @[VendingMachine.scala 97:26]
+    end else if (!(~io_sub & ~io_add)) begin // @[VendingMachine.scala 106:51]
+      if (!(io_add)) begin // @[VendingMachine.scala 108:32]
+        if (io_sub) begin // @[VendingMachine.scala 110:33]
+          numCanReg <= _numCanReg_T_1; // @[VendingMachine.scala 112:15]
+        end
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 115:26]
+      scrollReg <= 32'h0; // @[VendingMachine.scala 115:26]
+    end else if (numCanReg == 8'h0) begin // @[VendingMachine.scala 116:26]
+      if (scrollReg == 32'h2faf080) begin // @[VendingMachine.scala 122:37]
+        scrollReg <= 32'h0; // @[VendingMachine.scala 123:17]
+      end else begin
+        scrollReg <= _scrollReg_T_1; // @[VendingMachine.scala 121:15]
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 117:28]
+      selector1 <= 4'h0; // @[VendingMachine.scala 117:28]
+    end else if (scrollReg == 32'h2faf080) begin // @[VendingMachine.scala 122:37]
+      if (_GEN_92 == 5'h12) begin // @[VendingMachine.scala 128:31]
+        selector1 <= 4'h0; // @[VendingMachine.scala 128:42]
+      end else begin
+        selector1 <= _selector1_T_1; // @[VendingMachine.scala 124:17]
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 118:28]
+      selector2 <= 4'h1; // @[VendingMachine.scala 118:28]
+    end else if (scrollReg == 32'h2faf080) begin // @[VendingMachine.scala 122:37]
+      if (_GEN_93 == 5'h12) begin // @[VendingMachine.scala 129:31]
+        selector2 <= 4'h0; // @[VendingMachine.scala 129:42]
+      end else begin
+        selector2 <= _selector2_T_1; // @[VendingMachine.scala 125:17]
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 119:28]
+      selector3 <= 4'h2; // @[VendingMachine.scala 119:28]
+    end else if (scrollReg == 32'h2faf080) begin // @[VendingMachine.scala 122:37]
+      if (_GEN_94 == 5'h12) begin // @[VendingMachine.scala 130:31]
+        selector3 <= 4'h0; // @[VendingMachine.scala 130:42]
+      end else begin
+        selector3 <= _selector3_T_1; // @[VendingMachine.scala 126:17]
+      end
+    end
+    if (reset) begin // @[VendingMachine.scala 120:28]
+      selector4 <= 4'h3; // @[VendingMachine.scala 120:28]
+    end else if (scrollReg == 32'h2faf080) begin // @[VendingMachine.scala 122:37]
+      if (_GEN_95 == 5'h12) begin // @[VendingMachine.scala 131:31]
+        selector4 <= 4'h0; // @[VendingMachine.scala 131:42]
+      end else begin
+        selector4 <= _selector4_T_1; // @[VendingMachine.scala 127:17]
+      end
+    end
+  end
+// Register and memory initialization
+`ifdef RANDOMIZE_GARBAGE_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_INVALID_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_REG_INIT
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+`define RANDOMIZE
+`endif
+`ifndef RANDOM
+`define RANDOM $random
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+  integer initvar;
+`endif
+`ifndef SYNTHESIS
+`ifdef FIRRTL_BEFORE_INITIAL
+`FIRRTL_BEFORE_INITIAL
+`endif
+initial begin
+  `ifdef RANDOMIZE
+    `ifdef INIT_RANDOM
+      `INIT_RANDOM
+    `endif
+    `ifndef VERILATOR
+      `ifdef RANDOMIZE_DELAY
+        #`RANDOMIZE_DELAY begin end
+      `else
+        #0.002 begin end
+      `endif
+    `endif
+`ifdef RANDOMIZE_REG_INIT
+  _RAND_0 = {1{`RANDOM}};
+  sumReg = _RAND_0[6:0];
+  _RAND_1 = {1{`RANDOM}};
+  numCanReg = _RAND_1[7:0];
+  _RAND_2 = {1{`RANDOM}};
+  scrollReg = _RAND_2[31:0];
+  _RAND_3 = {1{`RANDOM}};
+  selector1 = _RAND_3[3:0];
+  _RAND_4 = {1{`RANDOM}};
+  selector2 = _RAND_4[3:0];
+  _RAND_5 = {1{`RANDOM}};
+  selector3 = _RAND_5[3:0];
+  _RAND_6 = {1{`RANDOM}};
+  selector4 = _RAND_6[3:0];
+`endif // RANDOMIZE_REG_INIT
+  `endif // RANDOMIZE
+end // initial
+`ifdef FIRRTL_AFTER_INITIAL
+`FIRRTL_AFTER_INITIAL
+`endif
+`endif // SYNTHESIS
+endmodule
+module fsm(
+  input        clock,
+  input        reset,
+  input  [4:0] io_price,
+  input  [7:0] io_sum,
+  input        io_buy,
+  input        io_coin,
+  input        io_empty,
+  output       io_sub,
+  output       io_add,
+  output       io_alarm,
+  output       io_releaseCan
+);
+`ifdef RANDOMIZE_REG_INIT
+  reg [31:0] _RAND_0;
+`endif // RANDOMIZE_REG_INIT
+  reg [2:0] stateReg; // @[VendingMachine.scala 170:25]
+  wire [7:0] _GEN_13 = {{3'd0}, io_price}; // @[VendingMachine.scala 175:29]
+  wire [2:0] _GEN_0 = io_empty ? 3'h6 : stateReg; // @[VendingMachine.scala 181:28 182:18 170:25]
+  wire [2:0] _GEN_1 = io_coin ? 3'h4 : _GEN_0; // @[VendingMachine.scala 179:26 180:18]
+  wire [2:0] _GEN_4 = ~io_buy ? 3'h0 : stateReg; // @[VendingMachine.scala 189:31 190:17 170:25]
+  wire [2:0] _GEN_6 = ~io_coin ? 3'h0 : stateReg; // @[VendingMachine.scala 202:32 203:17 170:25]
+  wire [2:0] _GEN_7 = 3'h5 == stateReg ? _GEN_6 : stateReg; // @[VendingMachine.scala 173:19 170:25]
+  wire [2:0] _GEN_8 = 3'h4 == stateReg ? 3'h5 : _GEN_7; // @[VendingMachine.scala 173:19 199:16]
+  wire [2:0] _GEN_9 = 3'h3 == stateReg ? _GEN_4 : _GEN_8; // @[VendingMachine.scala 173:19]
+  wire  _io_sub_T = stateReg == 3'h1; // @[VendingMachine.scala 212:21]
+  assign io_sub = stateReg == 3'h1; // @[VendingMachine.scala 212:21]
+  assign io_add = stateReg == 3'h4; // @[VendingMachine.scala 213:22]
+  assign io_alarm = stateReg == 3'h3; // @[VendingMachine.scala 214:24]
+  assign io_releaseCan = stateReg == 3'h2 | _io_sub_T; // @[VendingMachine.scala 215:42]
+  always @(posedge clock) begin
+    if (reset) begin // @[VendingMachine.scala 170:25]
+      stateReg <= 3'h0; // @[VendingMachine.scala 170:25]
+    end else if (3'h0 == stateReg) begin // @[VendingMachine.scala 173:19]
+      if (io_buy & io_sum >= _GEN_13) begin // @[VendingMachine.scala 175:41]
+        stateReg <= 3'h1; // @[VendingMachine.scala 176:18]
+      end else if (io_buy & io_sum < _GEN_13) begin // @[VendingMachine.scala 177:47]
+        stateReg <= 3'h3; // @[VendingMachine.scala 178:18]
+      end else begin
+        stateReg <= _GEN_1;
+      end
+    end else if (3'h1 == stateReg) begin // @[VendingMachine.scala 173:19]
+      stateReg <= 3'h2; // @[VendingMachine.scala 186:15]
+    end else if (3'h2 == stateReg) begin // @[VendingMachine.scala 173:19]
+      stateReg <= _GEN_4;
+    end else begin
+      stateReg <= _GEN_9;
+    end
+  end
+// Register and memory initialization
+`ifdef RANDOMIZE_GARBAGE_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_INVALID_ASSIGN
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_REG_INIT
+`define RANDOMIZE
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+`define RANDOMIZE
+`endif
+`ifndef RANDOM
+`define RANDOM $random
+`endif
+`ifdef RANDOMIZE_MEM_INIT
+  integer initvar;
+`endif
+`ifndef SYNTHESIS
+`ifdef FIRRTL_BEFORE_INITIAL
+`FIRRTL_BEFORE_INITIAL
+`endif
+initial begin
+  `ifdef RANDOMIZE
+    `ifdef INIT_RANDOM
+      `INIT_RANDOM
+    `endif
+    `ifndef VERILATOR
+      `ifdef RANDOMIZE_DELAY
+        #`RANDOMIZE_DELAY begin end
+      `else
+        #0.002 begin end
+      `endif
+    `endif
+`ifdef RANDOMIZE_REG_INIT
+  _RAND_0 = {1{`RANDOM}};
+  stateReg = _RAND_0[2:0];
+`endif // RANDOMIZE_REG_INIT
+  `endif // RANDOMIZE
+end // initial
+`ifdef FIRRTL_AFTER_INITIAL
+`FIRRTL_AFTER_INITIAL
+`endif
+`endif // SYNTHESIS
+endmodule
 module BcdTable(
   input  [7:0] io_address,
   output [7:0] io_data
@@ -286,8 +609,7 @@ module SevenSegDec(
   wire [6:0] _GEN_13 = 4'h2 == io_in ? 7'h5b : _GEN_12; // @[SevenSegDec.scala 15:17 18:22]
   wire [6:0] _GEN_14 = 4'h1 == io_in ? 7'h30 : _GEN_13; // @[SevenSegDec.scala 15:17 17:22]
   wire [6:0] _GEN_15 = 4'h0 == io_in ? 7'h3f : _GEN_14; // @[SevenSegDec.scala 15:17 16:22]
-  wire [6:0] _sevSeg_T = ~io_customIn; // @[SevenSegDec.scala 33:37]
-  wire [6:0] sevSeg = io_custom ? _sevSeg_T : _GEN_15; // @[SevenSegDec.scala 33:{26,34}]
+  wire [6:0] sevSeg = io_custom ? io_customIn : _GEN_15; // @[SevenSegDec.scala 33:{26,34}]
   assign io_out = ~sevSeg; // @[SevenSegDec.scala 36:13]
 endmodule
 module DisplayMultiplexer(
@@ -408,103 +730,6 @@ end // initial
 `endif
 `endif // SYNTHESIS
 endmodule
-module fsm(
-  input        clock,
-  input        reset,
-  input  [4:0] io_price,
-  input  [7:0] io_sum,
-  input        io_buy,
-  input        io_coin,
-  input  [7:0] io_numOfCan,
-  output       io_sub,
-  output       io_add,
-  output       io_alarm,
-  output       io_releaseCan,
-  output       io_empty
-);
-`ifdef RANDOMIZE_REG_INIT
-  reg [31:0] _RAND_0;
-`endif // RANDOMIZE_REG_INIT
-  reg [2:0] stateReg; // @[VendingMachine.scala 128:25]
-  wire [7:0] _GEN_13 = {{3'd0}, io_price}; // @[VendingMachine.scala 133:29]
-  wire [2:0] _GEN_0 = io_numOfCan == 8'h0 ? 3'h6 : stateReg; // @[VendingMachine.scala 139:39 140:18 128:25]
-  wire [2:0] _GEN_1 = io_coin ? 3'h4 : _GEN_0; // @[VendingMachine.scala 137:26 138:18]
-  wire [2:0] _GEN_4 = ~io_buy ? 3'h0 : stateReg; // @[VendingMachine.scala 147:31 148:17 128:25]
-  wire [2:0] _GEN_6 = ~io_coin ? 3'h0 : stateReg; // @[VendingMachine.scala 160:32 161:17 128:25]
-  wire [2:0] _GEN_7 = 3'h5 == stateReg ? _GEN_6 : stateReg; // @[VendingMachine.scala 131:19 128:25]
-  wire [2:0] _GEN_8 = 3'h4 == stateReg ? 3'h5 : _GEN_7; // @[VendingMachine.scala 131:19 157:16]
-  wire [2:0] _GEN_9 = 3'h3 == stateReg ? _GEN_4 : _GEN_8; // @[VendingMachine.scala 131:19]
-  wire  _io_sub_T = stateReg == 3'h1; // @[VendingMachine.scala 170:21]
-  assign io_sub = stateReg == 3'h1; // @[VendingMachine.scala 170:21]
-  assign io_add = stateReg == 3'h4; // @[VendingMachine.scala 171:22]
-  assign io_alarm = stateReg == 3'h3; // @[VendingMachine.scala 172:24]
-  assign io_releaseCan = stateReg == 3'h2 | _io_sub_T; // @[VendingMachine.scala 173:42]
-  assign io_empty = stateReg == 3'h6; // @[VendingMachine.scala 174:24]
-  always @(posedge clock) begin
-    if (reset) begin // @[VendingMachine.scala 128:25]
-      stateReg <= 3'h0; // @[VendingMachine.scala 128:25]
-    end else if (3'h0 == stateReg) begin // @[VendingMachine.scala 131:19]
-      if (io_buy & io_sum >= _GEN_13) begin // @[VendingMachine.scala 133:41]
-        stateReg <= 3'h1; // @[VendingMachine.scala 134:18]
-      end else if (io_buy & io_sum < _GEN_13) begin // @[VendingMachine.scala 135:47]
-        stateReg <= 3'h3; // @[VendingMachine.scala 136:18]
-      end else begin
-        stateReg <= _GEN_1;
-      end
-    end else if (3'h1 == stateReg) begin // @[VendingMachine.scala 131:19]
-      stateReg <= 3'h2; // @[VendingMachine.scala 144:15]
-    end else if (3'h2 == stateReg) begin // @[VendingMachine.scala 131:19]
-      stateReg <= _GEN_4;
-    end else begin
-      stateReg <= _GEN_9;
-    end
-  end
-// Register and memory initialization
-`ifdef RANDOMIZE_GARBAGE_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_INVALID_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_REG_INIT
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_MEM_INIT
-`define RANDOMIZE
-`endif
-`ifndef RANDOM
-`define RANDOM $random
-`endif
-`ifdef RANDOMIZE_MEM_INIT
-  integer initvar;
-`endif
-`ifndef SYNTHESIS
-`ifdef FIRRTL_BEFORE_INITIAL
-`FIRRTL_BEFORE_INITIAL
-`endif
-initial begin
-  `ifdef RANDOMIZE
-    `ifdef INIT_RANDOM
-      `INIT_RANDOM
-    `endif
-    `ifndef VERILATOR
-      `ifdef RANDOMIZE_DELAY
-        #`RANDOMIZE_DELAY begin end
-      `else
-        #0.002 begin end
-      `endif
-    `endif
-`ifdef RANDOMIZE_REG_INIT
-  _RAND_0 = {1{`RANDOM}};
-  stateReg = _RAND_0[2:0];
-`endif // RANDOMIZE_REG_INIT
-  `endif // RANDOMIZE
-end // initial
-`ifdef FIRRTL_AFTER_INITIAL
-`FIRRTL_AFTER_INITIAL
-`endif
-`endif // SYNTHESIS
-endmodule
 module VendingMachine(
   input        clock,
   input        reset,
@@ -517,77 +742,99 @@ module VendingMachine(
   output [6:0] io_seg,
   output [3:0] io_an
 );
-`ifdef RANDOMIZE_REG_INIT
-  reg [31:0] _RAND_0;
-  reg [31:0] _RAND_1;
-`endif // RANDOMIZE_REG_INIT
-  wire  coin2Deb_clock; // @[VendingMachine.scala 30:24]
-  wire  coin2Deb_reset; // @[VendingMachine.scala 30:24]
-  wire  coin2Deb_io_in; // @[VendingMachine.scala 30:24]
-  wire  coin2Deb_io_out; // @[VendingMachine.scala 30:24]
-  wire  coin5Deb_clock; // @[VendingMachine.scala 34:24]
-  wire  coin5Deb_reset; // @[VendingMachine.scala 34:24]
-  wire  coin5Deb_io_in; // @[VendingMachine.scala 34:24]
-  wire  coin5Deb_io_out; // @[VendingMachine.scala 34:24]
-  wire  buyDeb_clock; // @[VendingMachine.scala 38:22]
-  wire  buyDeb_reset; // @[VendingMachine.scala 38:22]
-  wire  buyDeb_io_in; // @[VendingMachine.scala 38:22]
-  wire  buyDeb_io_out; // @[VendingMachine.scala 38:22]
-  wire  dispMux_clock; // @[VendingMachine.scala 50:23]
-  wire  dispMux_reset; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_customIn_0; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_customIn_1; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_customIn_2; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_customIn_3; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_sum; // @[VendingMachine.scala 50:23]
-  wire [4:0] dispMux_io_price; // @[VendingMachine.scala 50:23]
-  wire [6:0] dispMux_io_seg; // @[VendingMachine.scala 50:23]
-  wire [3:0] dispMux_io_an; // @[VendingMachine.scala 50:23]
-  wire  fsm_clock; // @[VendingMachine.scala 58:19]
-  wire  fsm_reset; // @[VendingMachine.scala 58:19]
-  wire [4:0] fsm_io_price; // @[VendingMachine.scala 58:19]
-  wire [7:0] fsm_io_sum; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_buy; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_coin; // @[VendingMachine.scala 58:19]
-  wire [7:0] fsm_io_numOfCan; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_sub; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_add; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_alarm; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_releaseCan; // @[VendingMachine.scala 58:19]
-  wire  fsm_io_empty; // @[VendingMachine.scala 58:19]
-  reg [6:0] sumReg; // @[VendingMachine.scala 44:23]
-  reg [7:0] numCanReg; // @[VendingMachine.scala 47:26]
-  wire  coin2 = coin2Deb_io_out; // @[VendingMachine.scala 25:26 32:9]
-  wire  coin5 = coin5Deb_io_out; // @[VendingMachine.scala 26:26 36:9]
-  wire [2:0] _GEN_0 = coin5 ? 3'h5 : 3'h0; // @[VendingMachine.scala 76:32 77:13 22:28]
-  wire [2:0] coinVal = coin2 ? 3'h2 : _GEN_0; // @[VendingMachine.scala 74:25 75:13]
-  wire  sub = fsm_io_sub; // @[VendingMachine.scala 18:24 67:7]
-  wire  add = fsm_io_add; // @[VendingMachine.scala 19:24 68:7]
-  wire [6:0] _GEN_12 = {{4'd0}, coinVal}; // @[VendingMachine.scala 84:22]
-  wire [6:0] _sumReg_T_1 = sumReg + _GEN_12; // @[VendingMachine.scala 84:22]
-  wire [6:0] _GEN_13 = {{2'd0}, io_price}; // @[VendingMachine.scala 86:22]
-  wire [6:0] _sumReg_T_3 = sumReg - _GEN_13; // @[VendingMachine.scala 86:22]
-  wire [7:0] _numCanReg_T_1 = numCanReg - 8'h1; // @[VendingMachine.scala 87:28]
-  wire  empty = fsm_io_empty; // @[VendingMachine.scala 23:26 71:9]
-  Debouncer coin2Deb ( // @[VendingMachine.scala 30:24]
+  wire  coin2Deb_clock; // @[VendingMachine.scala 25:24]
+  wire  coin2Deb_reset; // @[VendingMachine.scala 25:24]
+  wire  coin2Deb_io_in; // @[VendingMachine.scala 25:24]
+  wire  coin2Deb_io_out; // @[VendingMachine.scala 25:24]
+  wire  coin5Deb_clock; // @[VendingMachine.scala 29:24]
+  wire  coin5Deb_reset; // @[VendingMachine.scala 29:24]
+  wire  coin5Deb_io_in; // @[VendingMachine.scala 29:24]
+  wire  coin5Deb_io_out; // @[VendingMachine.scala 29:24]
+  wire  buyDeb_clock; // @[VendingMachine.scala 33:22]
+  wire  buyDeb_reset; // @[VendingMachine.scala 33:22]
+  wire  buyDeb_io_in; // @[VendingMachine.scala 33:22]
+  wire  buyDeb_io_out; // @[VendingMachine.scala 33:22]
+  wire  dataPath_clock; // @[VendingMachine.scala 38:24]
+  wire  dataPath_reset; // @[VendingMachine.scala 38:24]
+  wire [4:0] dataPath_io_price; // @[VendingMachine.scala 38:24]
+  wire  dataPath_io_coin2; // @[VendingMachine.scala 38:24]
+  wire  dataPath_io_coin5; // @[VendingMachine.scala 38:24]
+  wire  dataPath_io_sub; // @[VendingMachine.scala 38:24]
+  wire  dataPath_io_add; // @[VendingMachine.scala 38:24]
+  wire [6:0] dataPath_io_sum; // @[VendingMachine.scala 38:24]
+  wire  dataPath_io_coin; // @[VendingMachine.scala 38:24]
+  wire [6:0] dataPath_io_customOut_0; // @[VendingMachine.scala 38:24]
+  wire [6:0] dataPath_io_customOut_1; // @[VendingMachine.scala 38:24]
+  wire [6:0] dataPath_io_customOut_2; // @[VendingMachine.scala 38:24]
+  wire [6:0] dataPath_io_customOut_3; // @[VendingMachine.scala 38:24]
+  wire  fsm_clock; // @[VendingMachine.scala 39:19]
+  wire  fsm_reset; // @[VendingMachine.scala 39:19]
+  wire [4:0] fsm_io_price; // @[VendingMachine.scala 39:19]
+  wire [7:0] fsm_io_sum; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_buy; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_coin; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_empty; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_sub; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_add; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_alarm; // @[VendingMachine.scala 39:19]
+  wire  fsm_io_releaseCan; // @[VendingMachine.scala 39:19]
+  wire  dispMux_clock; // @[VendingMachine.scala 60:23]
+  wire  dispMux_reset; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_customIn_0; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_customIn_1; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_customIn_2; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_customIn_3; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_sum; // @[VendingMachine.scala 60:23]
+  wire [4:0] dispMux_io_price; // @[VendingMachine.scala 60:23]
+  wire [6:0] dispMux_io_seg; // @[VendingMachine.scala 60:23]
+  wire [3:0] dispMux_io_an; // @[VendingMachine.scala 60:23]
+  Debouncer coin2Deb ( // @[VendingMachine.scala 25:24]
     .clock(coin2Deb_clock),
     .reset(coin2Deb_reset),
     .io_in(coin2Deb_io_in),
     .io_out(coin2Deb_io_out)
   );
-  Debouncer coin5Deb ( // @[VendingMachine.scala 34:24]
+  Debouncer coin5Deb ( // @[VendingMachine.scala 29:24]
     .clock(coin5Deb_clock),
     .reset(coin5Deb_reset),
     .io_in(coin5Deb_io_in),
     .io_out(coin5Deb_io_out)
   );
-  Debouncer buyDeb ( // @[VendingMachine.scala 38:22]
+  Debouncer buyDeb ( // @[VendingMachine.scala 33:22]
     .clock(buyDeb_clock),
     .reset(buyDeb_reset),
     .io_in(buyDeb_io_in),
     .io_out(buyDeb_io_out)
   );
-  DisplayMultiplexer dispMux ( // @[VendingMachine.scala 50:23]
+  dataPath dataPath ( // @[VendingMachine.scala 38:24]
+    .clock(dataPath_clock),
+    .reset(dataPath_reset),
+    .io_price(dataPath_io_price),
+    .io_coin2(dataPath_io_coin2),
+    .io_coin5(dataPath_io_coin5),
+    .io_sub(dataPath_io_sub),
+    .io_add(dataPath_io_add),
+    .io_sum(dataPath_io_sum),
+    .io_coin(dataPath_io_coin),
+    .io_customOut_0(dataPath_io_customOut_0),
+    .io_customOut_1(dataPath_io_customOut_1),
+    .io_customOut_2(dataPath_io_customOut_2),
+    .io_customOut_3(dataPath_io_customOut_3)
+  );
+  fsm fsm ( // @[VendingMachine.scala 39:19]
+    .clock(fsm_clock),
+    .reset(fsm_reset),
+    .io_price(fsm_io_price),
+    .io_sum(fsm_io_sum),
+    .io_buy(fsm_io_buy),
+    .io_coin(fsm_io_coin),
+    .io_empty(fsm_io_empty),
+    .io_sub(fsm_io_sub),
+    .io_add(fsm_io_add),
+    .io_alarm(fsm_io_alarm),
+    .io_releaseCan(fsm_io_releaseCan)
+  );
+  DisplayMultiplexer dispMux ( // @[VendingMachine.scala 60:23]
     .clock(dispMux_clock),
     .reset(dispMux_reset),
     .io_customIn_0(dispMux_io_customIn_0),
@@ -599,113 +846,40 @@ module VendingMachine(
     .io_seg(dispMux_io_seg),
     .io_an(dispMux_io_an)
   );
-  fsm fsm ( // @[VendingMachine.scala 58:19]
-    .clock(fsm_clock),
-    .reset(fsm_reset),
-    .io_price(fsm_io_price),
-    .io_sum(fsm_io_sum),
-    .io_buy(fsm_io_buy),
-    .io_coin(fsm_io_coin),
-    .io_numOfCan(fsm_io_numOfCan),
-    .io_sub(fsm_io_sub),
-    .io_add(fsm_io_add),
-    .io_alarm(fsm_io_alarm),
-    .io_releaseCan(fsm_io_releaseCan),
-    .io_empty(fsm_io_empty)
-  );
-  assign io_releaseCan = fsm_io_releaseCan; // @[VendingMachine.scala 21:31 70:14]
-  assign io_alarm = fsm_io_alarm; // @[VendingMachine.scala 20:26 69:9]
-  assign io_seg = dispMux_io_seg; // @[VendingMachine.scala 100:10]
-  assign io_an = dispMux_io_an; // @[VendingMachine.scala 101:9]
+  assign io_releaseCan = fsm_io_releaseCan; // @[VendingMachine.scala 70:17]
+  assign io_alarm = fsm_io_alarm; // @[VendingMachine.scala 69:12]
+  assign io_seg = dispMux_io_seg; // @[VendingMachine.scala 71:10]
+  assign io_an = dispMux_io_an; // @[VendingMachine.scala 72:9]
   assign coin2Deb_clock = clock;
   assign coin2Deb_reset = reset;
-  assign coin2Deb_io_in = io_coin2Raw; // @[VendingMachine.scala 31:18]
+  assign coin2Deb_io_in = io_coin2Raw; // @[VendingMachine.scala 26:18]
   assign coin5Deb_clock = clock;
   assign coin5Deb_reset = reset;
-  assign coin5Deb_io_in = io_coin5Raw; // @[VendingMachine.scala 35:18]
+  assign coin5Deb_io_in = io_coin5Raw; // @[VendingMachine.scala 30:18]
   assign buyDeb_clock = clock;
   assign buyDeb_reset = reset;
-  assign buyDeb_io_in = io_buyRaw; // @[VendingMachine.scala 39:16]
-  assign dispMux_clock = clock;
-  assign dispMux_reset = reset;
-  assign dispMux_io_customIn_0 = empty ? 7'h79 : 7'h0; // @[VendingMachine.scala 89:25 52:28 90:28]
-  assign dispMux_io_customIn_1 = empty ? 7'h73 : 7'h0; // @[VendingMachine.scala 89:25 52:28 91:28]
-  assign dispMux_io_customIn_2 = empty ? 7'h78 : 7'h0; // @[VendingMachine.scala 89:25 52:28 92:28]
-  assign dispMux_io_customIn_3 = empty ? 7'h6e : 7'h0; // @[VendingMachine.scala 89:25 52:28 93:28]
-  assign dispMux_io_sum = sumReg; // @[VendingMachine.scala 55:18]
-  assign dispMux_io_price = io_price; // @[VendingMachine.scala 54:20]
+  assign buyDeb_io_in = io_buyRaw; // @[VendingMachine.scala 34:16]
+  assign dataPath_clock = clock;
+  assign dataPath_reset = reset;
+  assign dataPath_io_price = io_price; // @[VendingMachine.scala 42:21]
+  assign dataPath_io_coin2 = coin2Deb_io_out; // @[VendingMachine.scala 20:26 27:9]
+  assign dataPath_io_coin5 = coin5Deb_io_out; // @[VendingMachine.scala 21:26 31:9]
+  assign dataPath_io_sub = fsm_io_sub; // @[VendingMachine.scala 46:19]
+  assign dataPath_io_add = fsm_io_add; // @[VendingMachine.scala 47:19]
   assign fsm_clock = clock;
   assign fsm_reset = reset;
-  assign fsm_io_price = io_price; // @[VendingMachine.scala 60:16]
-  assign fsm_io_sum = {{1'd0}, sumReg}; // @[VendingMachine.scala 61:14]
-  assign fsm_io_buy = buyDeb_io_out; // @[VendingMachine.scala 27:24 40:7]
-  assign fsm_io_coin = coin2 | coin5; // @[VendingMachine.scala 63:24]
-  assign fsm_io_numOfCan = numCanReg; // @[VendingMachine.scala 64:19]
-  always @(posedge clock) begin
-    if (reset) begin // @[VendingMachine.scala 44:23]
-      sumReg <= 7'h0; // @[VendingMachine.scala 44:23]
-    end else if (!(~sub & ~add)) begin // @[VendingMachine.scala 81:45]
-      if (add) begin // @[VendingMachine.scala 83:29]
-        sumReg <= _sumReg_T_1; // @[VendingMachine.scala 84:12]
-      end else if (sub) begin // @[VendingMachine.scala 85:30]
-        sumReg <= _sumReg_T_3; // @[VendingMachine.scala 86:12]
-      end
-    end
-    if (reset) begin // @[VendingMachine.scala 47:26]
-      numCanReg <= 8'ha; // @[VendingMachine.scala 47:26]
-    end else if (!(~sub & ~add)) begin // @[VendingMachine.scala 81:45]
-      if (!(add)) begin // @[VendingMachine.scala 83:29]
-        if (sub) begin // @[VendingMachine.scala 85:30]
-          numCanReg <= _numCanReg_T_1; // @[VendingMachine.scala 87:15]
-        end
-      end
-    end
-  end
-// Register and memory initialization
-`ifdef RANDOMIZE_GARBAGE_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_INVALID_ASSIGN
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_REG_INIT
-`define RANDOMIZE
-`endif
-`ifdef RANDOMIZE_MEM_INIT
-`define RANDOMIZE
-`endif
-`ifndef RANDOM
-`define RANDOM $random
-`endif
-`ifdef RANDOMIZE_MEM_INIT
-  integer initvar;
-`endif
-`ifndef SYNTHESIS
-`ifdef FIRRTL_BEFORE_INITIAL
-`FIRRTL_BEFORE_INITIAL
-`endif
-initial begin
-  `ifdef RANDOMIZE
-    `ifdef INIT_RANDOM
-      `INIT_RANDOM
-    `endif
-    `ifndef VERILATOR
-      `ifdef RANDOMIZE_DELAY
-        #`RANDOMIZE_DELAY begin end
-      `else
-        #0.002 begin end
-      `endif
-    `endif
-`ifdef RANDOMIZE_REG_INIT
-  _RAND_0 = {1{`RANDOM}};
-  sumReg = _RAND_0[6:0];
-  _RAND_1 = {1{`RANDOM}};
-  numCanReg = _RAND_1[7:0];
-`endif // RANDOMIZE_REG_INIT
-  `endif // RANDOMIZE
-end // initial
-`ifdef FIRRTL_AFTER_INITIAL
-`FIRRTL_AFTER_INITIAL
-`endif
-`endif // SYNTHESIS
+  assign fsm_io_price = io_price; // @[VendingMachine.scala 49:16]
+  assign fsm_io_sum = {{1'd0}, dataPath_io_sum}; // @[VendingMachine.scala 52:14]
+  assign fsm_io_buy = buyDeb_io_out; // @[VendingMachine.scala 22:24 35:7]
+  assign fsm_io_coin = dataPath_io_coin; // @[VendingMachine.scala 53:15]
+  assign fsm_io_empty = dataPath_io_customOut_3 != 7'h0 | dataPath_io_customOut_2 != 7'h0 | dataPath_io_customOut_1 != 7'h0
+     | dataPath_io_customOut_0 != 7'h0; // @[VendingMachine.scala 54:111]
+  assign dispMux_clock = clock;
+  assign dispMux_reset = reset;
+  assign dispMux_io_customIn_0 = dataPath_io_customOut_0; // @[VendingMachine.scala 66:23]
+  assign dispMux_io_customIn_1 = dataPath_io_customOut_1; // @[VendingMachine.scala 66:23]
+  assign dispMux_io_customIn_2 = dataPath_io_customOut_2; // @[VendingMachine.scala 66:23]
+  assign dispMux_io_customIn_3 = dataPath_io_customOut_3; // @[VendingMachine.scala 66:23]
+  assign dispMux_io_sum = dataPath_io_sum; // @[VendingMachine.scala 65:18]
+  assign dispMux_io_price = io_price; // @[VendingMachine.scala 64:20]
 endmodule
