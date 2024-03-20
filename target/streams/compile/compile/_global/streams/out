@@ -1,6 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\David\Desktop\OneDrive - Danmarks Tekniske Universitet\Skole ting\2 sem\DIGI 2\Digi-vending\Digi2-vending\src\main\scala\VendingMachine.scala:53:109: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : chisel3.Bool[0m
-[0m[[0m[31merror[0m] [0m[0m required: Boolean[0m
-[0m[[0m[31merror[0m] [0m[0m  if(dataPath.io.customOut(3) =/= 0.U | dataPath.io.customOut(2) =/= 0.U | dataPath.io.customOut(1) =/= 0.U | dataPath.io.customOut(0) =/= 0.U){[0m
-[0m[[0m[31merror[0m] [0m[0m                                                                                                            ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m

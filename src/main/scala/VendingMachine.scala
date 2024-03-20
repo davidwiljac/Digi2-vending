@@ -2,6 +2,7 @@ import chisel3._
 import chisel3.util._
 import dataclass.data
 
+// Asger Tester
 class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for displayMultiplexer, c for debouncer
   val io = IO(new Bundle {
     val price = Input(UInt(5.W))
@@ -15,7 +16,6 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
     val an = Output(UInt(4.W))
   })
 
-  val empty = WireDefault(false.B)
   val coin2 = WireDefault(false.B)
   val coin5 = WireDefault(false.B)
   val buy = WireDefault(false.B)
@@ -50,16 +50,10 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
 
   fsm.io.sum := dataPath.io.sum
   fsm.io.coin := dataPath.io.coin
-  when(dataPath.io.customOut(3) =/= 0.U | dataPath.io.customOut(2) =/= 0.U | dataPath.io.customOut(1) =/= 0.U | dataPath.io.customOut(0) =/= 0.U){
-    fsm.io.empty := true.B
-  } .otherwise {
-    fsm.io.empty := false.B
-  }
+  fsm.io.empty := dataPath.io.empty
+  
 // Configure DisplayMultiplexer with input connections
   val dispMux = Module(new DisplayMultiplexer(maxCount))
-  for(i <- 0 until 4) {
-    dispMux.io.customIn(i) := 0.U
-  }
   dispMux.io.price := io.price
   dispMux.io.sum := dataPath.io.sum
   dispMux.io.customIn := dataPath.io.customOut
@@ -82,26 +76,26 @@ class dataPath() extends Module {
     val sum = Output(UInt(7.W))
     val coin = Output(Bool())
     val customOut = Output(Vec(4, UInt(7.W)))
+    val empty = Output(Bool())
   })
 
-  for(i <- 0 until 4) {
-    io.customOut(i) := 0.U
-  }
-  // Define internal wires
+// Define internal wires
   val coinVal = WireDefault(0.U)
-
-// Define sumReg 
-  val sumReg = RegInit(0.U(7.W))
-
-  val numCanReg = RegInit(10.U(8.W))
 // Configure MUX for wire coinVal
   when(io.coin2 === true.B){
     coinVal := 2.U
   } .elsewhen(io.coin5 === true.B){
     coinVal := 5.U
   }
+
+// Define sumReg 
+  val sumReg = RegInit(0.U(7.W))
+
+// Define numCanReg
+  val numCanReg = RegInit(10.U(8.W))
+
   
-  // Handle input from FSM
+  // MUX form sumReg and numCanReg
   when((io.sub === false.B)&&(io.add === false.B)){ //Idle
     sumReg := sumReg
   }.elsewhen(io.add === true.B){ //Add coin
@@ -115,11 +109,16 @@ class dataPath() extends Module {
     io.customOut(2) := "b1110011".U //P
     io.customOut(1) := "b1111000".U //t
     io.customOut(0) := "b1101110".U //y
+  } .otherwise{
+    for(i <- 0 until 4) {
+      io.customOut(i) := 0.U
+    }
   }
 
 // Connect output pins
   io.sum := sumReg
   io.coin := (io.coin2 || io.coin5)
+  io.empty := (numCanReg === 0.U)
 }
 
 class fsm extends Module{
