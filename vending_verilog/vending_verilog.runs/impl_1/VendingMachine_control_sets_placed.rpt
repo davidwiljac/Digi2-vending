@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2.2 (win64) Build 4126759 Thu Feb  8 23:53:51 MST 2024
-| Date         : Wed Mar 20 16:15:40 2024
+| Date         : Thu Mar 21 09:23:09 2024
 | Host         : Laptop1 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file VendingMachine_control_sets_placed.rpt
 | Design       : VendingMachine
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    11 |
-|    Minimum number of control sets                        |    11 |
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    38 |
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    11 |
+| Total control sets |    12 |
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     2 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     6 |
+| >= 16              |     7 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -63,7 +63,7 @@ Table of Contents
 | No           | Yes                   | No                     |             107 |           29 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              69 |           26 |
+| Yes          | Yes                   | No                     |              85 |           36 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -78,12 +78,13 @@ Table of Contents
 |  clock_IBUF_BUFG | fsm/E[0]                            | reset_IBUF                                |                2 |              7 |         3.50 |
 |  clock_IBUF_BUFG | fsm/FSM_onehot_stateReg_reg[6]_0[0] | reset_IBUF                                |                2 |              8 |         4.00 |
 |  clock_IBUF_BUFG |                                     | reset_IBUF                                |                3 |              9 |         3.00 |
-|  clock_IBUF_BUFG | dataPath/selector1                  | reset_IBUF                                |                7 |             16 |         2.29 |
+|  clock_IBUF_BUFG | dataPath/selector1                  | reset_IBUF                                |               10 |             16 |         1.60 |
+|  clock_IBUF_BUFG | dataPath/sel                        | reset_IBUF                                |                8 |             16 |         2.00 |
 |  clock_IBUF_BUFG |                                     | dispMux/tickCounterReg[0]_i_1_n_0         |                5 |             17 |         3.40 |
-|  clock_IBUF_BUFG |                                     | buyDeb/fsm/FSM_onehot_stateReg_reg[2]_0   |                7 |             27 |         3.86 |
 |  clock_IBUF_BUFG |                                     | coin2Deb/fsm/FSM_onehot_stateReg_reg[2]_0 |                7 |             27 |         3.86 |
 |  clock_IBUF_BUFG |                                     | coin5Deb/fsm/FSM_onehot_stateReg_reg[2]_0 |                7 |             27 |         3.86 |
-|  clock_IBUF_BUFG | dataPath/scrollReg_0                | reset_IBUF                                |               13 |             32 |         2.46 |
+|  clock_IBUF_BUFG |                                     | buyDeb/fsm/FSM_onehot_stateReg_reg[2]_0   |                7 |             27 |         3.86 |
+|  clock_IBUF_BUFG | dataPath/scrollReg0                 | reset_IBUF                                |               12 |             32 |         2.67 |
 +------------------+-------------------------------------+-------------------------------------------+------------------+----------------+--------------+
 
 

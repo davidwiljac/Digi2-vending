@@ -3,8 +3,8 @@
 # SW Build 4126759 on Thu Feb  8 23:53:51 MST 2024
 # IP Build 4126054 on Fri Feb  9 11:39:09 MST 2024
 # SharedData Build 4115275 on Tue Jan 30 00:40:57 MST 2024
-# Start of session at: Wed Mar 20 16:15:06 2024
-# Process ID: 7244
+# Start of session at: Thu Mar 21 09:22:36 2024
+# Process ID: 3812
 # Current directory: C:/Users/David/Desktop/OneDrive - Danmarks Tekniske Universitet/Skole ting/2 sem/DIGI 2/Digi-vending/Digi2-vending/vending_verilog/vending_verilog.runs/impl_1
 # Command line: vivado.exe -log VendingMachine.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source VendingMachine.tcl -notrace
 # Log file: C:/Users/David/Desktop/OneDrive - Danmarks Tekniske Universitet/Skole ting/2 sem/DIGI 2/Digi-vending/Digi2-vending/vending_verilog/vending_verilog.runs/impl_1/VendingMachine.vdi
