@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mchisel3.internal.ChiselException: Connection between sink (fsm.io.alarm: IO[Bool]) and source (dataPath.io.alarm: IO[Bool]) failed @: io.alarm in fsm cannot be written from module dataPath.[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingMachine.<init>(VendingMachine.scala:55)[0m
+[0m[[0m[31merror[0m] [0m[0m	at VendingSimulation$.$anonfun$new$2(VendingSimulation.scala:137)[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... ()[0m
+[0m[[0m[31merror[0m] [0m[0m	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mrun[0m) chisel3.internal.ChiselException: Connection between sink (fsm.io.alarm: IO[Bool]) and source (dataPath.io.alarm: IO[Bool]) failed @: io.alarm in fsm cannot be written from module dataPath.[0m

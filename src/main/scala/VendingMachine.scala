@@ -1,6 +1,7 @@
 import chisel3._
 import chisel3.util._
 import dataclass.data
+import javax.xml.crypto.Data
 
 // Asger Tester
 class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for displayMultiplexer, c for debouncer
@@ -45,6 +46,8 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   dataPath.io.sub := fsm.io.sub
   dataPath.io.add := fsm.io.add
   
+  dataPath.io.alarm := fsm.io.alarm
+
   fsm.io.price := io.price
   fsm.io.buy := buy
 
@@ -64,7 +67,6 @@ class VendingMachine(maxCount: Int, c: Int) extends Module {  //MaxCount for dis
   io.seg := dispMux.io.seg
   io.an := dispMux.io.an
 }
-
 
 class dataPath() extends Module {  
   val io = IO(new Bundle {
@@ -195,5 +197,3 @@ class fsm extends Module{
 object VendingMachine extends App {
   (new chisel3.stage.ChiselStage).emitVerilog(new VendingMachine(100_000, 10_000_000)) // (1kHz display, 0.1 s debounce)(maxCount max 130.000)
 }
-
-

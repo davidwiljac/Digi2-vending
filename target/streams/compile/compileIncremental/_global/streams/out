@@ -1,6 +1,11 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
+<<<<<<< HEAD
 [0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 20 products, 4 sources, 5 libraries[0m
 [0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/Debouncer.scala, ${BASE}/src/main/scala/DisplayMultiplexer.scala, ${BASE}/src/main/scala/SevenSegDec.scala, ${BASE}/src/main/scala/VendingMachine.scala)[0m
+=======
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 20 products, 6 sources, 5 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/SevenSegDec.scala, ${BASE}/src/main/scala/FSM.scala, ${BASE}/src/main/scala/VendingMachine.scala, ${BASE}/src/main/scala/DisplayMultiplexer.scala, ${BASE}/src/main/scala/Debouncer.scala, ${BASE}/src/main/scala/dataPath.scala)[0m
+>>>>>>> Scroll-empty
 [0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
