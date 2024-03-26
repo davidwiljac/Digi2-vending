@@ -1,7 +1,2 @@
-<<<<<<< HEAD
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@18e54eff))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@7d3b3c85))[0m
-=======
-[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@5cb21695))[0m
-[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@3b34e2f0))[0m
->>>>>>> Scroll-empty
+[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((org.scalatest.Suite,false,org.scalatest.tools.Framework$$anon$1@10cde016))[0m
+[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List((org.scalatest.WrapWith,false,org.scalatest.tools.Framework$$anon$2@74b9009a))[0m
